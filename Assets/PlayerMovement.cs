@@ -13,9 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         float _x = Input.GetAxis("Horizontal") * speed;
-        float _y = 0;
+        float _y = Input.GetAxis("Vertical") * speed;
         Vector2 _force = new Vector2(_x, _y);
 
-        rb.AddForce(_force);
+        rb.velocity = _force;
     }
 }

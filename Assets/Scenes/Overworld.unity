@@ -1700,6 +1700,31 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &747214835 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7579384317134787736, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
+  m_PrefabInstance: {fileID: 2049210272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &747214838
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747214835}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7bcd427770273f4aa998ba8cea73b5f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1143366368
 GameObject:
   m_ObjectHideFlags: 0
@@ -2693,5 +2718,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3962162514537059022, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 747214838}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2848729ac652941488678c27c8dd0f29, type: 3}

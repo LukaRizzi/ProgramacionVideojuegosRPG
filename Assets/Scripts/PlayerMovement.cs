@@ -19,15 +19,15 @@ namespace RPGUNDAV.Gameplay
             float _y = Input.GetAxis("Vertical") * speed;
             Vector2 _force = new Vector2(_x, _y);
 
-            rb.velocity = _force;
-
             if (_force != Vector2.zero)
             {
                 animator.SetBool("walking", true);
+                rb.velocity = _force;
             }
             else
             {
                 animator.SetBool("walking", false);
+                rb.velocity = Vector2.zero;
             }
         }
     }

@@ -2494,10 +2494,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.09859155
-    y: 0.09749304
-    width: 0.80125195
-    height: 0.8022284
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -12543,31 +12543,17 @@ CompositeCollider2D:
         Y: 50000000
       - X: -90000000
         Y: 30000000
-      - X: 319999900
-        Y: 30000000
-      - X: 319999900
-        Y: 29999959
-      - X: 319999959
-        Y: 29999900
       - X: 326249984
-        Y: 29999900
+        Y: 30000000
       - X: 326249984
         Y: 10000000
       - X: 390000000
         Y: 10000000
     - - X: 390000000
         Y: -20000000
-      - X: 330000100
+      - X: 326249984
         Y: -20000000
-      - X: 330000100
-        Y: -19999959
-      - X: 330000041
-        Y: -19999900
-      - X: 326249943
-        Y: -19999900
-      - X: 326249884
-        Y: -19999959
-      - X: 326249884
+      - X: 326249984
         Y: -40000000
       - X: -90000000
         Y: -40000000
@@ -12581,12 +12567,12 @@ CompositeCollider2D:
       - {x: 38.999973, y: 5}
       - {x: -9, y: 4.999971}
       - {x: -8.99997, y: 3}
-      - {x: 32.625, y: 2.9999607}
+      - {x: 32.625, y: 2.9999707}
       - {x: 32.625027, y: 1}
     - - {x: 38.999973, y: -6}
       - {x: 38.999973, y: -2}
-      - {x: 32.62499, y: -2.0000253}
-      - {x: 32.62496, y: -4}
+      - {x: 32.625, y: -2.0000293}
+      - {x: 32.62497, y: -4}
       - {x: -9, y: -4.000029}
       - {x: -8.99997, y: -6}
   m_VertexDistance: 0.0005
@@ -12598,10 +12584,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3535363347179166017, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 643def22ce3d0c94da0ed02f42ce4606, type: 2}
     - target: {fileID: 3535363347179166019, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
       propertyPath: m_RootOrder
       value: 1

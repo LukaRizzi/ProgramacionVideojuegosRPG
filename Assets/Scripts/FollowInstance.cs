@@ -1,29 +1,32 @@
 using UnityEngine;
 
-[ExecuteInEditMode]
-public class FollowInstance : MonoBehaviour
+namespace RPGUNDAV.Gameplay
 {
-    [SerializeField] Transform follow;
-    [SerializeField] private float time = 1;
-    [SerializeField] private float maxSpeed = 1;
-    private Vector3 velRef;
-
-    private void Start()
+    [ExecuteInEditMode]
+    public class FollowInstance : MonoBehaviour
     {
-        transform.position = GetPos();
-    }
+        [SerializeField] Transform follow;
+        [SerializeField] private float time = 1;
+        [SerializeField] private float maxSpeed = 1;
+        private Vector3 velRef;
 
-    private void Update()
-    {
-        Vector3 _desiredPos = GetPos();
+        private void Start()
+        {
+            transform.position = GetPos();
+        }
 
-        transform.position = Vector3.SmoothDamp(transform.position, _desiredPos, ref velRef, time, maxSpeed);
-    }
+        private void Update()
+        {
+            Vector3 _desiredPos = GetPos();
 
-    Vector3 GetPos()
-    {
-        float _x = Mathf.Floor((follow.position.x + 16f / 2) / 16f) * 16f;
-        float _y = Mathf.Floor((follow.position.y + 9 / 2) / 9) * 9;
-        return new Vector3(_x, _y, transform.position.z);
+            transform.position = Vector3.SmoothDamp(transform.position, _desiredPos, ref velRef, time, maxSpeed);
+        }
+
+        Vector3 GetPos()
+        {
+            float _x = Mathf.Floor((follow.position.x + 16 / 2) / 16) * 16;
+            float _y = Mathf.Floor((follow.position.y + 9 / 2) / 9) * 9;
+            return new Vector3(_x, _y, transform.position.z);
+        }
     }
 }

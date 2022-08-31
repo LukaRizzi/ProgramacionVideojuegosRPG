@@ -39,6 +39,7 @@ namespace RPGUNDAV.Gameplay
             if (_canRest && Input.GetKeyDown(KeyCode.Space))
             {
                 manager.ChangeState(new PlayerStateResting());
+                //manager.sr.flipX = bonfire.transform.position.x < manager.transform.position.x;
             }
         }
     }

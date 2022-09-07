@@ -12830,18 +12830,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CangrejoEnemigo
       objectReference: {fileID: 0}
-    - target: {fileID: 1504630009978185431, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}
-      propertyPath: moveDirection.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504630009978185431, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}
-      propertyPath: moveDirection.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504630009978185431, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}
-      propertyPath: whatIsSolid.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}
 --- !u!1001 &1624134395975471058

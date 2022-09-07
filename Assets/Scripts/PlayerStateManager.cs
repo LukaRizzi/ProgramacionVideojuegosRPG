@@ -9,14 +9,14 @@ namespace RPGUNDAV.Gameplay
         public float speed = 1f;
         public Rigidbody2D rb;
         public Animator animator;
-        //public SpriteRenderer sr;
+        public SpriteRenderer sr;
 
         private PlayerState state = new PlayerStateWalking();
 
         private void Awake()
         {
             rb = GetComponent<Rigidbody2D>();
-            //sr = GetComponentInChildren<SpriteRenderer>();
+            sr = GetComponentInChildren<SpriteRenderer>();
         }
 
         private void Start()

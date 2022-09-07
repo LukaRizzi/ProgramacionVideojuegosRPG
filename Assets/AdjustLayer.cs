@@ -10,6 +10,11 @@ public class AdjustLayer : MonoBehaviour
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+
+        if (target == null)
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+        }
     }
 
     private void Update()

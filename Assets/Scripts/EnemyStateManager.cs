@@ -5,9 +5,8 @@ namespace RPGUNDAV.Gameplay
     public class EnemyStateManager : MonoBehaviour
     {
         public float speed = 2f;
-        public SpriteRenderer sr;
         public Rigidbody2D rb;
-        public Vector2 moveDirection = Vector2.right;
+        public float raycastDistance = 1f;
 
         private EnemyState state = new EnemyStateWalking();
 

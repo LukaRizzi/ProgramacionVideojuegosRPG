@@ -16,9 +16,9 @@ namespace RPGUNDAV.Gameplay
         {
             manager.rb.velocity = manager.transform.right * manager.speed;
 
-            RaycastHit2D hit = Physics2D.Raycast(manager.transform.position, manager.transform.right, manager.raycastDistance);
+            RaycastHit2D hitWall = Physics2D.Raycast(manager.transform.position, manager.transform.right, manager.raycastWallDistance, manager.whatIsSolid);
 
-            if (hit)
+            if (hitWall)
             {
                 manager.transform.rotation = Quaternion.Euler(
                     manager.transform.rotation.eulerAngles.x,
@@ -26,7 +26,7 @@ namespace RPGUNDAV.Gameplay
                     manager.transform.rotation.eulerAngles.z + 180);
             }
 
-            Debug.DrawRay(manager.transform.position, manager.transform.right * manager.raycastDistance, Color.green, .01f);
+            Debug.DrawRay(manager.transform.position, manager.transform.right * manager.raycastWallDistance, Color.green, .01f);
         }
     }
 }

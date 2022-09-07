@@ -6,7 +6,9 @@ namespace RPGUNDAV.Gameplay
     {
         public float speed = 2f;
         public Rigidbody2D rb;
-        public float raycastDistance = 1f;
+        public float raycastWallDistance = 1f;
+
+        public LayerMask whatIsSolid;
 
         private EnemyState state = new EnemyStateWalking();
 

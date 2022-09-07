@@ -101,9 +101,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  sr: {fileID: 929572255805542524}
   rb: {fileID: 3466857488875002591}
-  moveDirection: {x: 1, y: 0}
+  raycastWallDistance: 1
+  whatIsSolid:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &929572255805542514
 MonoBehaviour:
   m_ObjectHideFlags: 0

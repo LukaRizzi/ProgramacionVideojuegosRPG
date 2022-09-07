@@ -10144,7 +10144,7 @@ GameObject:
   - component: {fileID: 1445497142}
   - component: {fileID: 1445497144}
   - component: {fileID: 1445497143}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Solid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12757,6 +12757,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3535363347179166077, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3962162514537059022, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
       propertyPath: levelManager
       value: 
@@ -12833,6 +12837,10 @@ PrefabInstance:
     - target: {fileID: 1504630009978185431, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}
       propertyPath: moveDirection.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504630009978185431, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}
+      propertyPath: whatIsSolid.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}

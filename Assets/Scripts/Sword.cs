@@ -19,6 +19,11 @@ public class Sword : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print(collision.transform.name);
+        EnemyHPManager hpManager = collision.GetComponent<EnemyHPManager>();
+
+        if (hpManager != null)
+        {
+            hpManager.Hp--;
+        }
     }
 }

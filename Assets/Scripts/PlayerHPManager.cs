@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHPManager : HPManager
+namespace RPGUNDAV.Gameplay
 {
-    public override void OnDeath()
+    public class PlayerHPManager : HPManager
     {
-        print("Te moriste!");
+        public override void OnDeath()
+        {
+            print("Te moriste!");
+        }
     }
 }

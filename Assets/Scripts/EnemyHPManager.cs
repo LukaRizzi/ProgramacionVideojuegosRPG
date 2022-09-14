@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHPManager : HPManager
+namespace RPGUNDAV.Gameplay
 {
-    public override void OnDeath()
+    public class EnemyHPManager : HPManager
     {
-        Destroy(this.gameObject);
+        public override void OnDeath()
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

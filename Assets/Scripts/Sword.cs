@@ -2,28 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sword : MonoBehaviour
+namespace RPGUNDAV.Gameplay
 {
-    [SerializeField] private Animator anim;
-
-    private void Start()
+    public class Sword : MonoBehaviour
     {
-        anim = GetComponentInChildren<Animator>();
-    }
+        [SerializeField] private Animator anim;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.V))
-            anim.SetTrigger("attack");
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        EnemyHPManager hpManager = collision.GetComponent<EnemyHPManager>();
-
-        if (hpManager != null)
+        private void Start()
         {
-            hpManager.Hp--;
+            anim = GetComponentInChildren<Animator>();
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.V))
+                anim.SetTrigger("attack");
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            EnemyHPManager hpManager = collision.GetComponent<EnemyHPManager>();
+
+            if (hpManager != null)
+            {
+                hpManager.Hp--;
+            }
         }
     }
 }

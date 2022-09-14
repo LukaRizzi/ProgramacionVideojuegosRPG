@@ -2,23 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class HPManager : MonoBehaviour
+namespace RPGUNDAV.Gameplay
 {
-    [SerializeField] private int hp;
-    public int Hp
+    public abstract class HPManager : MonoBehaviour
     {
-        get { return hp; }
-        set
+        [SerializeField] private int hp;
+        public int Hp
         {
-            hp = Mathf.Clamp(value, 0, hpMax);
-
-            if (hp <= 0)
+            get { return hp; }
+            set
             {
-                OnDeath();
+                hp = Mathf.Clamp(value, 0, hpMax);
+
+                if (hp <= 0)
+                {
+                    OnDeath();
+                }
             }
         }
-    }
-    public int hpMax = 100;
+        public int hpMax = 100;
 
-    public abstract void OnDeath();
+        public abstract void OnDeath();
+    }
 }

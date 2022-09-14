@@ -2,33 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AdjustLayer : MonoBehaviour
+namespace RPGUNDAV.Gameplay
 {
-    [SerializeField] Transform target;
-    SpriteRenderer sr;
-
-    private void Start()
+    public class AdjustLayer : MonoBehaviour
     {
-        sr = GetComponent<SpriteRenderer>();
+        [SerializeField] Transform target;
+        SpriteRenderer sr;
 
-        if (target == null)
+        private void Start()
         {
-            target = GameObject.FindGameObjectWithTag("Player").transform;
+            sr = GetComponent<SpriteRenderer>();
+
+            if (target == null)
+            {
+                target = GameObject.FindGameObjectWithTag("Player").transform;
+            }
         }
-    }
 
-    private void Update()
-    {
-        float _targetY = target.position.y;
-        bool _behindTarget = _targetY > transform.position.y;
+        private void Update()
+        {
+            float _targetY = target.position.y;
+            bool _behindTarget = _targetY > transform.position.y;
 
-        if (_behindTarget)
-        {
-            sr.sortingOrder = 2;
-        }
-        else
-        {
-            sr.sortingOrder = 0;
+            if (_behindTarget)
+            {
+                sr.sortingOrder = 2;
+            }
+            else
+            {
+                sr.sortingOrder = 0;
+            }
         }
     }
 }

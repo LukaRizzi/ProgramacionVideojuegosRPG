@@ -8,5 +8,6 @@ namespace RPGUNDAV.Gameplay
     {
         public abstract void StartState(PlayerStateManager manager);
         public abstract void UpdateState(PlayerStateManager manager);
+        public abstract void OnAttacked(PlayerStateManager manager, GameObject enemy);
     }
 }

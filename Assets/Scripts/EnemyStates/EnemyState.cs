@@ -8,5 +8,6 @@ namespace RPGUNDAV.Gameplay
     {
         public abstract void StartState(EnemyStateManager manager);
         public abstract void UpdateState(EnemyStateManager manager);
+        public abstract void OnCollisionWithPlayer(EnemyStateManager manager, GameObject player);
     }
 }

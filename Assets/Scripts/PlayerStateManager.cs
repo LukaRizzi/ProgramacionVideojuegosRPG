@@ -6,6 +6,8 @@ namespace RPGUNDAV.Gameplay
     {
         public LevelManager levelManager;
 
+        public PlayerHPManager hpManager;
+
         public float speed = 1f;
         public Rigidbody2D rb;
         public Animator animator;
@@ -33,6 +35,11 @@ namespace RPGUNDAV.Gameplay
         {
             state = newState;
             state.StartState(this);
+        }
+
+        public void Attacked(GameObject enemy)
+        {
+            state.OnAttacked(this, enemy);
         }
     }
 }

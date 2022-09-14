@@ -28,5 +28,10 @@ namespace RPGUNDAV.Gameplay
 
             Debug.DrawRay(manager.transform.position, manager.transform.right * manager.raycastWallDistance, Color.green, .01f);
         }
+
+        public override void OnCollisionWithPlayer(EnemyStateManager manager, GameObject player)
+        {
+            player.GetComponent<PlayerStateManager>().Attacked(manager.gameObject);
+        }
     }
 }

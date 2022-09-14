@@ -27,5 +27,13 @@ namespace RPGUNDAV.Gameplay
             state = newState;
             state.StartState(this);
         }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("PlayerHurtBox"))
+            {
+                state.OnCollisionWithPlayer(this, collision.transform.parent.gameObject);
+            }
+        }
     }
 }

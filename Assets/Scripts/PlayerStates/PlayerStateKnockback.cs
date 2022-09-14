@@ -1,24 +1,20 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace RPGUNDAV.Gameplay
 {
-    public class PlayerStateResting : PlayerState
+    public class PlayerStateKnockback : PlayerState
     {
         public override void StartState(PlayerStateManager manager)
         {
-            manager.hpManager.Hp = manager.hpManager.hpMax;
             manager.animator.SetBool("walking", false);
-            manager.animator.SetBool("resting", true);
-            manager.rb.velocity = Vector2.zero;
         }
 
         public override void UpdateState(PlayerStateManager manager)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (manager.rb.velocity.magnitude <= .01f)
             {
-                manager.animator.SetBool("resting", false);
                 manager.ChangeState(new PlayerStateWalking());
             }
         }

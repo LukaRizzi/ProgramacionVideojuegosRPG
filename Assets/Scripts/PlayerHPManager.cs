@@ -6,6 +6,6 @@ public class PlayerHPManager : HPManager
 {
     public override void OnDeath()
     {
-
+        print("Te moriste!");
     }
 }

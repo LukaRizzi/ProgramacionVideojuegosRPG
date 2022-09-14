@@ -45,5 +45,15 @@ namespace RPGUNDAV.Gameplay
             }
             #endregion
         }
+
+        public override void OnAttacked(PlayerStateManager manager, GameObject enemy)
+        {
+            manager.hpManager.Hp--;
+
+            Vector2 dir = (manager.transform.position - enemy.transform.position).normalized;
+            manager.rb.velocity = dir * 10;
+
+            manager.ChangeState(new PlayerStateKnockback());
+        }
     }
 }

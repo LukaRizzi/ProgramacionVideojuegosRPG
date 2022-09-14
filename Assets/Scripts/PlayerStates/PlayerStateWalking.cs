@@ -23,7 +23,7 @@ namespace RPGUNDAV.Gameplay
                 manager.animator.SetBool("walking", true);
                 manager.rb.velocity = _force;
                 manager.sr.flipX = Mathf.Sign(_force.x) < 0;
-                manager.swordHolder.localScale = new Vector3(Mathf.Sign(_force.x) < 0? -1 : 1, 1,1);
+                manager.swordHolder.localScale = new Vector3(manager.sr.flipX ? -1 : 1, 1,1);
             }
             else
             {
@@ -40,6 +40,7 @@ namespace RPGUNDAV.Gameplay
                     if (Vector2.Distance(bonfire.transform.position, manager.transform.position) < 2)
                     {
                         manager.sr.flipX = bonfire.transform.position.x < manager.transform.position.x;
+                        manager.swordHolder.localScale = new Vector3(manager.sr.flipX ? -1 : 1, 1, 1);
                         manager.ChangeState(new PlayerStateResting());
                     }
                 }

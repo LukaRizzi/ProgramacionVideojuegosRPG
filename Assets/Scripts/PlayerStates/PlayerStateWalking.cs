@@ -23,6 +23,7 @@ namespace RPGUNDAV.Gameplay
                 manager.animator.SetBool("walking", true);
                 manager.rb.velocity = _force;
                 manager.sr.flipX = Mathf.Sign(_force.x) < 0;
+                manager.swordHolder.localScale = new Vector3(Mathf.Sign(_force.x) < 0? -1 : 1, 1,1);
             }
             else
             {

@@ -15,6 +15,8 @@ namespace RPGUNDAV.Gameplay
 
         private PlayerState state = new PlayerStateWalking();
 
+        public Transform swordHolder;
+
         private void Awake()
         {
             rb = GetComponent<Rigidbody2D>();

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,12 +21,14 @@ namespace RPGUNDAV.Gameplay
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
-        {
-            EnemyHPManager hpManager = collision.GetComponent<EnemyHPManager>();
-
-            if (hpManager != null)
+        {   
+            GameObject collided = collision.gameObject;
+            
+            if (collided.layer == 7)
             {
-                hpManager.Hp--;
+                EnemyStateManager enemyManager = collision.GetComponent<EnemyStateManager>();
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                enemyManager.Attacked(player);
             }
         }
     }

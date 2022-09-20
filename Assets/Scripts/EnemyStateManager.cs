@@ -6,6 +6,8 @@ namespace RPGUNDAV.Gameplay
     {
         public float speed = 2f;
         public Rigidbody2D rb;
+        public EnemyHPManager hpManager;
+
         public float raycastWallDistance = 1f;
 
         public LayerMask whatIsSolid;
@@ -34,6 +36,11 @@ namespace RPGUNDAV.Gameplay
             {
                 state.OnCollisionWithPlayer(this, collision.transform.parent.gameObject);
             }
+        }
+
+        public void Attacked(GameObject player) 
+        {
+            state.OnAttacked(this, player);
         }
     }
 }

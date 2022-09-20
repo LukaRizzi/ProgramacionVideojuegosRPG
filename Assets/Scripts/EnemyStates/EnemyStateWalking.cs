@@ -33,5 +33,17 @@ namespace RPGUNDAV.Gameplay
         {
             player.GetComponent<PlayerStateManager>().Attacked(manager.gameObject);
         }
+
+        public override void OnAttacked(EnemyStateManager manager, GameObject player)
+        {
+            manager.hpManager.Hp--;
+
+            Vector2 dir = (manager.transform.position - player.transform.position).normalized;
+            Debug.Log(player.transform.position);
+            manager.rb.velocity = dir * 6;
+
+            manager.ChangeState(new EnemyStateKnockback());
+        }
+
     }
 }

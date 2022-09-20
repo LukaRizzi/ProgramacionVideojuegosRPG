@@ -19,20 +19,25 @@ namespace RPGUNDAV.Gameplay
 
         public LayerMask whatIsSolid;
 
+        public EnemyState defaultState;
         private EnemyState state;
 
         private void Start()
         {
-            
             switch(enemy){
                 case enemies.CRAB:
-                    state = new CrabStateWalking();
+                    defaultState = new CrabStateWalking();
                     break;
                 case enemies.RAT:
-                    state = new RatStateWalking();
+                    defaultState = new RatStateWalking();
                     break;
-                default: break;
+                default:
+                    Debug.LogError("ERROR: ENEMIGO " + enemy.ToString() + " NO TIENE ESTADO INICIAL");
+                    break;
             }
+
+            state = defaultState;
+            state.StartState(this);
         }
 
         private void Update()

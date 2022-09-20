@@ -16,7 +16,7 @@ namespace RPGUNDAV.Gameplay
         {
             if (manager.rb.velocity.magnitude <= .01f)
             {
-                manager.ChangeState(new EnemyStateWalking());
+                manager.ChangeState(manager.defaultState);
             }
         }
 

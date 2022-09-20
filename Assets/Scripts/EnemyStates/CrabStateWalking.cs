@@ -39,11 +39,9 @@ namespace RPGUNDAV.Gameplay
             manager.hpManager.Hp--;
 
             Vector2 dir = (manager.transform.position - player.transform.position).normalized;
-            Debug.Log(player.transform.position);
             manager.rb.velocity = dir * 6;
 
             manager.ChangeState(new EnemyStateKnockback());
         }
-
     }
 }

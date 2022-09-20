@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7782758249608927555}
   - component: {fileID: 7782758249608927554}
   - component: {fileID: -6482880330095506021}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RataEnemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,8 @@ MonoBehaviour:
   enemy: 1
   speed: 2
   rb: {fileID: 7782758249608927552}
-  sr: {fileID: 0}
+  hpManager: {fileID: 7782758249608927554}
+  sr: {fileID: 7782758249608927567}
   raycastWallDistance: 0.75
   whatIsSolid:
     serializedVersion: 2
@@ -138,7 +139,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -184,7 +185,7 @@ Animator:
   m_GameObject: {fileID: 7782758249608927557}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03c2c9df38139bc4da8aa6ffab4a711d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

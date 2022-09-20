@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 namespace RPGUNDAV.Gameplay
 {
-    public class EnemyStateWalking : EnemyState
+    public class CrabStateWalking : EnemyState
     {
         public override void StartState(EnemyStateManager manager)
         {

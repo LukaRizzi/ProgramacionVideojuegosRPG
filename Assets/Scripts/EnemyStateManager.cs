@@ -1,20 +1,37 @@
+using System;
 using UnityEngine;
 
 namespace RPGUNDAV.Gameplay
 {
     public class EnemyStateManager : MonoBehaviour
-    {
+        {
+        public enum enemies {
+            CRAB,
+            RAT
+        }
+        public enemies enemy;
         public float speed = 2f;
         public Rigidbody2D rb;
+
+        public SpriteRenderer sr;
         public float raycastWallDistance = 1f;
 
         public LayerMask whatIsSolid;
 
-        private EnemyState state = new EnemyStateWalking();
+        private EnemyState state;
 
         private void Start()
         {
-            state.StartState(this);
+            
+            switch(enemy){
+                case enemies.CRAB:
+                    state = new CrabStateWalking();
+                    break;
+                case enemies.RAT:
+                    state = new RatStateWalking();
+                    break;
+                default: break;
+            }
         }
 
         private void Update()
@@ -34,6 +51,10 @@ namespace RPGUNDAV.Gameplay
             {
                 state.OnCollisionWithPlayer(this, collision.transform.parent.gameObject);
             }
+        }
+
+        public void Attacked(GameObject enemy)
+        {
         }
     }
 }

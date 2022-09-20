@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace RPGUNDAV.Gameplay
 {
+
     public abstract class EnemyState
     {
         public abstract void StartState(EnemyStateManager manager);

@@ -8,7 +8,7 @@ namespace RPGUNDAV.Gameplay
     {
         public override void StartState(PlayerStateManager manager)
         {
-
+            manager.swordHolder.gameObject.SetActive(true);
         }
 
         public override void UpdateState(PlayerStateManager manager)
@@ -42,6 +42,7 @@ namespace RPGUNDAV.Gameplay
                         manager.sr.flipX = bonfire.transform.position.x < manager.transform.position.x;
                         manager.swordHolder.localScale = new Vector3(manager.sr.flipX ? -1 : 1, 1, 1);
                         manager.ChangeState(new PlayerStateResting());
+                        manager.swordHolder.gameObject.SetActive(false);
                     }
                 }
             }
@@ -56,6 +57,7 @@ namespace RPGUNDAV.Gameplay
             manager.rb.velocity = dir * 10;
 
             manager.ChangeState(new PlayerStateKnockback());
+            manager.swordHolder.gameObject.SetActive(false);
         }
     }
 }

@@ -2568,30 +2568,6 @@ MonoBehaviour:
   m_CropFrameX: 1
   m_CropFrameY: 1
   m_StretchFill: 0
---- !u!1 &600387795 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7782758249608927557, guid: 2655e35e1e3266948ae084222f9cfa8d, type: 3}
-  m_PrefabInstance: {fileID: 7782758249117739414}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &600387801 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7782758249608927567, guid: 2655e35e1e3266948ae084222f9cfa8d, type: 3}
-  m_PrefabInstance: {fileID: 7782758249117739414}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &600387804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600387795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19e9051834823124391797c2b11478d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 4
-  hpMax: 4
 --- !u!4 &644522975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3535363347179166019, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
@@ -12924,11 +12900,6 @@ CompositeCollider2D:
       - {x: 14.000029, y: -3}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
---- !u!212 &1781458140 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 929572255805542524, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}
-  m_PrefabInstance: {fileID: 929572256027531146}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2049210272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12988,6 +12959,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3535363347179166077, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3962162514537059022, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
       propertyPath: levelManager
       value: 
@@ -13001,18 +12976,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 929572255805542514, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 644522975}
-    - target: {fileID: 929572255805542524, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 929572255805542524, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 929572255805542525, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -13060,14 +13023,6 @@ PrefabInstance:
     - target: {fileID: 929572255805542527, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}
       propertyPath: m_Name
       value: CangrejoEnemigo
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504630009978185431, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}
-      propertyPath: sr
-      value: 
-      objectReference: {fileID: 1781458140}
-    - target: {fileID: 1504630009978185431, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}
-      propertyPath: enemy
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c3b3cc68d62ca04a94509e7d9d0b9dd, type: 3}
@@ -13139,14 +13094,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -6482880330095506021, guid: 2655e35e1e3266948ae084222f9cfa8d, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 03c2c9df38139bc4da8aa6ffab4a711d, type: 2}
-    - target: {fileID: 7782758249608927553, guid: 2655e35e1e3266948ae084222f9cfa8d, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 644522975}
     - target: {fileID: 7782758249608927557, guid: 2655e35e1e3266948ae084222f9cfa8d, type: 3}
       propertyPath: m_Name
       value: RataEnemigo
@@ -13154,10 +13101,6 @@ PrefabInstance:
     - target: {fileID: 7782758249608927564, guid: 2655e35e1e3266948ae084222f9cfa8d, type: 3}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7782758249608927564, guid: 2655e35e1e3266948ae084222f9cfa8d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7782758249608927564, guid: 2655e35e1e3266948ae084222f9cfa8d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13197,18 +13140,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7782758249608927564, guid: 2655e35e1e3266948ae084222f9cfa8d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7782758249608927566, guid: 2655e35e1e3266948ae084222f9cfa8d, type: 3}
-      propertyPath: sr
-      value: 
-      objectReference: {fileID: 600387801}
-    - target: {fileID: 7782758249608927567, guid: 2655e35e1e3266948ae084222f9cfa8d, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7782758249608927567, guid: 2655e35e1e3266948ae084222f9cfa8d, type: 3}
-      propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

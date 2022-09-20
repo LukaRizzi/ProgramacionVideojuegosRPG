@@ -13,7 +13,7 @@ namespace RPGUNDAV.Gameplay
         public Animator animator;
         public SpriteRenderer sr;
 
-        private PlayerState state = new PlayerStateWalking();
+        public PlayerState state { get; private set; }
 
         public Transform swordHolder;
 
@@ -25,7 +25,7 @@ namespace RPGUNDAV.Gameplay
 
         private void Start()
         {
-            state.StartState(this);
+            ChangeState(new PlayerStateWalking());
         }
 
         private void Update()

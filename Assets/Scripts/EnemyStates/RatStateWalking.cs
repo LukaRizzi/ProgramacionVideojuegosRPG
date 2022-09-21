@@ -14,27 +14,45 @@ namespace RPGUNDAV.Gameplay
 
         public override void UpdateState(EnemyStateManager manager)
         {
-            manager.rb.velocity = manager.transform.up * manager.speed + manager.transform.right * manager.speed;
+            Vector3 dir = manager.transform.up * manager.speed + manager.transform.right * manager.speed;
 
+            RaycastHit2D hitWall = Physics2D.Raycast(manager.transform.position, dir, manager.raycastWallDistance, manager.whatIsSolid);
+
+            if (hitWall)
+            {
+                Vector3 direccion = Quaternion.Euler(0, 0, 45) * Vector3.Reflect(dir, hitWall.normal);
+                manager.transform.rotation = Quaternion.LookRotation(Vector3.forward, direccion);
+
+                dir = manager.transform.up * manager.speed + manager.transform.right * manager.speed;
+
+                manager.transform.GetChild(0).rotation = Quaternion.identity;
+            }
+
+            manager.rb.velocity = dir;
+
+            /*
             RaycastHit2D hitWallVertical = Physics2D.Raycast(manager.transform.position, manager.transform.up, manager.raycastWallDistance, manager.whatIsSolid);
             RaycastHit2D hitWallHorizontal = Physics2D.Raycast(manager.transform.position, manager.transform.right, manager.raycastWallDistance, manager.whatIsSolid);
             if (hitWallVertical)
             {
                 manager.transform.rotation = Quaternion.Euler(
-                    manager.transform.rotation.eulerAngles.x + 180,
-                    manager.transform.rotation.eulerAngles.y,
-                    manager.transform.rotation.eulerAngles.z);
-                ToggleSpriteRendererY(manager);
-            }
-            if (hitWallHorizontal){
-                    manager.transform.rotation = Quaternion.Euler(
-                    manager.transform.rotation.eulerAngles.x,
-                    manager.transform.rotation.eulerAngles.y,
-                    manager.transform.rotation.eulerAngles.z+180);
-            }
+                manager.transform.rotation.eulerAngles.x,
+                manager.transform.rotation.eulerAngles.y,
+                manager.transform.rotation.eulerAngles.z + 90);
 
-            Debug.DrawRay(manager.transform.position, manager.transform.up * manager.raycastWallDistance, Color.green, .01f);
-            Debug.DrawRay(manager.transform.position, manager.transform.right * manager.raycastWallDistance, Color.red, .01f);
+                ToggleSpriteRendererY(manager);
+                
+            }
+            if (hitWallHorizontal)
+            {
+                manager.transform.rotation = Quaternion.Euler(
+                manager.transform.rotation.eulerAngles.x,
+                manager.transform.rotation.eulerAngles.y,
+                manager.transform.rotation.eulerAngles.z + 90);
+            }
+            */
+
+            Debug.DrawRay(manager.transform.position, dir.normalized * manager.raycastWallDistance, Color.green, .01f);
         }
         
         public override void OnCollisionWithPlayer(EnemyStateManager manager, GameObject player)

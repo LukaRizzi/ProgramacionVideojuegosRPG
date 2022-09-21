@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 6114721163295888140}
   - component: {fileID: 6114721163295888141}
   - component: {fileID: 6114721163295888138}
-  - component: {fileID: 6114721163295888139}
   - component: {fileID: 6114721163295888143}
-  - component: {fileID: 6114721163295888142}
+  - component: {fileID: 867050876218244810}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -104,26 +103,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &6114721163295888139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6114721163295888136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fadf96628921dd349adbd01685a56991, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickup: 1
-  quantity: 1
-  currencyValue: 1
-  sr: {fileID: 6114721163295888141}
-  whatIsSolid:
-    serializedVersion: 2
-    m_Bits: 256
-  lm: {fileID: 0}
 --- !u!95 &6114721163295888143
 Animator:
   serializedVersion: 4
@@ -144,7 +123,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6114721163295888142
+--- !u!114 &867050876218244810
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,9 +132,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6114721163295888136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Script: {fileID: 11500000, guid: d3901e35abe5c804f9d5abf6834c5ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
+  value: 1
+  lm: {fileID: 0}

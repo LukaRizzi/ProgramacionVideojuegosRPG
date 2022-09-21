@@ -7,7 +7,8 @@ namespace RPGUNDAV.Gameplay
         {
         public enum enemies {
             CRAB,
-            RAT
+            RAT,
+            SPIDER
         }
         public enemies enemy;
         public float speed = 2f;
@@ -30,6 +31,9 @@ namespace RPGUNDAV.Gameplay
                     break;
                 case enemies.RAT:
                     defaultState = new RatStateWalking();
+                    break;
+                case enemies.SPIDER:
+                    defaultState = new SpiderStateWalking();
                     break;
                 default:
                     Debug.LogError("ERROR: ENEMIGO " + enemy.ToString() + " NO TIENE ESTADO INICIAL");

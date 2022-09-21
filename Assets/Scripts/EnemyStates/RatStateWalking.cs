@@ -31,7 +31,6 @@ namespace RPGUNDAV.Gameplay
                     manager.transform.rotation.eulerAngles.x,
                     manager.transform.rotation.eulerAngles.y,
                     manager.transform.rotation.eulerAngles.z+180);
-                ToggleSpriteRendererY(manager);    
             }
 
             Debug.DrawRay(manager.transform.position, manager.transform.up * manager.raycastWallDistance, Color.green, .01f);
@@ -48,15 +47,6 @@ namespace RPGUNDAV.Gameplay
                 manager.sr.flipY = true;
             } else{
                 manager.sr.flipY = false;
-            }
-
-        }
-
-        private void ToggleSpriteRendererX(EnemyStateManager manager){
-            if(manager.sr.flipX == false){
-                manager.sr.flipX = true;
-            } else{
-                manager.sr.flipX = false;
             }
         }
 

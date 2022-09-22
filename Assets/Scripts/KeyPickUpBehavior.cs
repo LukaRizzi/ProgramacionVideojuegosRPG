@@ -3,22 +3,25 @@ using UnityEngine;
 
 namespace RPGUNDAV.Gameplay
 {
-    public class CoinBehavior : MonoBehaviour
+    public class KeyPickUpBehavior : MonoBehaviour
     {
         public int value = 1;
         [SerializeField] private LevelManager lm;
 
         private void Awake()
+        { 
+            if (lm == null) lm = GameObject.FindGameObjectWithTag("GameController").GetComponent<LevelManager>();
+        }
+
+        private void Update()
         {
-            if (lm == null)
-                lm = GameObject.FindGameObjectWithTag("GameController").GetComponent<LevelManager>();
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.CompareTag("Player"))
+            if (collision.CompareTag("PlayerHurtBox"))
             {
-                lm.AddCoinsToPlayer(value);
+                lm.AddKeysToPlayer(value);
                 Destroy(this.gameObject);
             }
         }

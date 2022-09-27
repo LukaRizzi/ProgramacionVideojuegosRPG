@@ -15,6 +15,7 @@ namespace RPGUNDAV.Gameplay
         public Rigidbody2D rb;
         public EnemyHPManager hpManager;
         public SpriteRenderer sr;
+        public Animator animator;
 
         public float raycastWallDistance = 1f;
 

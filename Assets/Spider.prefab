@@ -185,8 +185,9 @@ MonoBehaviour:
   enemy: 2
   speed: 4
   rb: {fileID: 6579807527046133811}
-  hpManager: {fileID: 0}
+  hpManager: {fileID: 6579807527046133809}
   sr: {fileID: 6579807527046133812}
+  animator: {fileID: 6579807527046133814}
   raycastWallDistance: 0.75
   whatIsSolid:
     serializedVersion: 2

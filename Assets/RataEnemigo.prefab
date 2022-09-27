@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 7782758249608927555}
   - component: {fileID: 7782758249608927554}
   - component: {fileID: 600387809}
+  - component: {fileID: 1885861687}
   m_Layer: 7
   m_Name: RataEnemigo
   m_TagString: Untagged
@@ -172,7 +173,8 @@ MonoBehaviour:
   speed: 2
   rb: {fileID: 7782758249608927552}
   hpManager: {fileID: 7782758249608927554}
-  sr: {fileID: 0}
+  sr: {fileID: 7432393713794153055}
+  animator: {fileID: 6090486577355922321}
   raycastWallDistance: 0.75
   whatIsSolid:
     serializedVersion: 2
@@ -244,3 +246,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!95 &1885861687
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7782758249608927557}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03c2c9df38139bc4da8aa6ffab4a711d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

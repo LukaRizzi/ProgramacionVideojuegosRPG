@@ -9,12 +9,15 @@ namespace RPGUNDAV.Gameplay
         public override void StartState(PlayerStateManager manager)
         {
             manager.animator.SetBool("walking", false);
+            manager.animator.SetTrigger("attacked");
+            manager.animator.SetBool("knockedBack", true);
         }
 
         public override void UpdateState(PlayerStateManager manager)
         {
             if (manager.rb.velocity.magnitude <= .01f)
             {
+                manager.animator.SetBool("knockedBack", false);
                 manager.ChangeState(new PlayerStateWalking());
             }
         }

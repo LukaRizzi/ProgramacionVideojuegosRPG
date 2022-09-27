@@ -9,13 +9,15 @@ namespace RPGUNDAV.Gameplay
     {
         public override void StartState(EnemyStateManager manager) 
         {
-
+            manager.animator.SetTrigger("attacked");
+            manager.animator.SetBool("knockedBack", true);
         }
 
         public override void UpdateState(EnemyStateManager manager) 
         {
             if (manager.rb.velocity.magnitude <= .01f)
             {
+                manager.animator.SetBool("knockedBack", false);
                 manager.ChangeState(manager.defaultState);
             }
         }

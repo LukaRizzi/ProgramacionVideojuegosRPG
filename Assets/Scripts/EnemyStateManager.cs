@@ -4,13 +4,14 @@ using UnityEngine;
 namespace RPGUNDAV.Gameplay
 {
     public class EnemyStateManager : MonoBehaviour
+    {
+        public enum Enemies
         {
-        public enum enemies {
             CRAB,
             RAT,
             SPIDER
         }
-        public enemies enemy;
+        public Enemies enemy;
         public float speed = 2f;
         public Rigidbody2D rb;
         public EnemyHPManager hpManager;
@@ -27,13 +28,13 @@ namespace RPGUNDAV.Gameplay
         private void Start()
         {
             switch(enemy){
-                case enemies.CRAB:
+                case Enemies.CRAB:
                     defaultState = new CrabStateWalking();
                     break;
-                case enemies.RAT:
+                case Enemies.RAT:
                     defaultState = new RatStateWalking();
                     break;
-                case enemies.SPIDER:
+                case Enemies.SPIDER:
                     defaultState = new SpiderStateWalking();
                     break;
                 default:

@@ -28,31 +28,10 @@ namespace RPGUNDAV.Gameplay
                 manager.transform.GetChild(0).rotation = Quaternion.identity;
             }
 
-            manager.rb.velocity = dir;
-
-            /*
-            RaycastHit2D hitWallVertical = Physics2D.Raycast(manager.transform.position, manager.transform.up, manager.raycastWallDistance, manager.whatIsSolid);
-            RaycastHit2D hitWallHorizontal = Physics2D.Raycast(manager.transform.position, manager.transform.right, manager.raycastWallDistance, manager.whatIsSolid);
-            if (hitWallVertical)
-            {
-                manager.transform.rotation = Quaternion.Euler(
-                manager.transform.rotation.eulerAngles.x,
-                manager.transform.rotation.eulerAngles.y,
-                manager.transform.rotation.eulerAngles.z + 90);
-
-                ToggleSpriteRendererY(manager);
-                
-            }
-            if (hitWallHorizontal)
-            {
-                manager.transform.rotation = Quaternion.Euler(
-                manager.transform.rotation.eulerAngles.x,
-                manager.transform.rotation.eulerAngles.y,
-                manager.transform.rotation.eulerAngles.z + 90);
-            }
-            */
-
-            Debug.DrawRay(manager.transform.position, dir.normalized * manager.raycastWallDistance, Color.green, .01f);
+            manager.rb.velocity = dir;  
+            
+            
+            //Debug.DrawRay(manager.transform.position, dir.normalized * manager.raycastWallDistance, Color.green, .01f);
         }
         
         public override void OnCollisionWithPlayer(EnemyStateManager manager, GameObject player)

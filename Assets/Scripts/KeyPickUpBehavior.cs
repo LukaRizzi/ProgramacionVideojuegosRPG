@@ -13,10 +13,6 @@ namespace RPGUNDAV.Gameplay
             if (lm == null) lm = GameObject.FindGameObjectWithTag("GameController").GetComponent<LevelManager>();
         }
 
-        private void Update()
-        {
-        }
-
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.CompareTag("PlayerHurtBox"))

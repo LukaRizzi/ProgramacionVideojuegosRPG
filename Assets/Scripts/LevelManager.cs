@@ -26,6 +26,7 @@ namespace RPGUNDAV.Gameplay
             bombText.text = "B "+playerBombs;
             keyText.text = "K "+playerKeys;
         }
+
         public void AddCoinsToPlayer(int quantity){
             playerCoins += quantity;
         }

@@ -20,6 +20,13 @@ namespace RPGUNDAV.Gameplay
                 lm.AddBombsToPlayer(value);
                 Destroy(this.gameObject);
             }
+
+            OneTimePickup OTPickup = GetComponent<OneTimePickup>();
+
+            if (OTPickup != null)
+            {
+                OTPickup.PickedUp();
+            }
         }
     }
 }

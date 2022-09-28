@@ -33,6 +33,7 @@ namespace RPGUNDAV.Gameplay
 
         public void AddCoinsToPlayer(int quantity){
             GameManager.Instance.playerCoins += quantity;
+            PlayerPrefs.SetInt("coins", GameManager.Instance.playerCoins);
         }
         public int getPlayerCoins(){
             return GameManager.Instance.playerCoins;
@@ -40,6 +41,7 @@ namespace RPGUNDAV.Gameplay
 
         public void AddBombsToPlayer(int quantity){
             GameManager.Instance.playerBombs += quantity;
+            PlayerPrefs.SetInt("coins", GameManager.Instance.playerBombs);
         }
         public int getPlayerBombs(){
             return GameManager.Instance.playerBombs;
@@ -47,6 +49,7 @@ namespace RPGUNDAV.Gameplay
 
         public void AddKeysToPlayer(int quantity){
             GameManager.Instance.playerKeys += quantity;
+            PlayerPrefs.SetInt("coins", GameManager.Instance.playerKeys);
         }
         public int getPlayerKeys(){
             return GameManager.Instance.playerKeys;

@@ -3,49 +3,54 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace RPGUNDAV.Gameplay
 {
     public class LevelManager : MonoBehaviour
     {
+        private string levelName;
+
         public List<GameObject> bonfires;
+        public List<GameObject> coins;
         [SerializeField] TMP_Text coinText;
         [SerializeField] TMP_Text bombText;
         [SerializeField] TMP_Text keyText;
-        [SerializeField] int playerCoins = 0;
-        [SerializeField] int playerBombs = 0;
-        [SerializeField] int playerKeys = 0;
 
         private void Start()
         {
+            levelName = SceneManager.GetActiveScene().name;
             bonfires = GameObject.FindGameObjectsWithTag("Bonfire").ToList();
+            coins = GameObject.FindGameObjectsWithTag("Coin").ToList();
         }
 
+        #region UPDATE_PLAYER_HUD
         public void Update(){
-            coinText.text = "$ "+playerCoins;
-            bombText.text = "B "+playerBombs;
-            keyText.text = "K "+playerKeys;
+            coinText.text = "$ "+ GameManager.Instance.playerCoins;
+            bombText.text = "B "+ GameManager.Instance.playerBombs;
+            keyText.text = "K "+ GameManager.Instance.playerKeys;
         }
 
         public void AddCoinsToPlayer(int quantity){
-            playerCoins += quantity;
+            GameManager.Instance.playerCoins += quantity;
         }
         public int getPlayerCoins(){
-            return playerCoins;
+            return GameManager.Instance.playerCoins;
         }
 
         public void AddBombsToPlayer(int quantity){
-            playerBombs += quantity;
+            GameManager.Instance.playerBombs += quantity;
         }
         public int getPlayerBombs(){
-            return playerBombs;
+            return GameManager.Instance.playerBombs;
         }
 
         public void AddKeysToPlayer(int quantity){
-            playerKeys += quantity;
+            GameManager.Instance.playerKeys += quantity;
         }
         public int getPlayerKeys(){
-            return playerKeys;
+            return GameManager.Instance.playerKeys;
         }
+        #endregion
     }
 }

@@ -4441,7 +4441,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4462,7 +4462,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4607,17 +4607,18 @@ TextureImporter:
       TILEMAP_192: 1803933163
       TILEMAP_41: -458758950
       TILEMAP_42: 1015328223
-      TILEMAP_21: -1091038829
+      TILEMAP_206: -817162542
       TILEMAP_36: -1170970886
-      TILEMAP_190: 1142013076
+      TILEMAP_21: -1091038829
       TILEMAP_126: -1392393684
+      TILEMAP_190: 1142013076
       TILEMAP_145: 470189879
       TILEMAP_87: -357140596
-      TILEMAP_175: -185994266
+      TILEMAP_149: -1360736740
       TILEMAP_50: -1808169689
       TILEMAP_68: 687077271
       TILEMAP_92: 1247532066
-      TILEMAP_149: -1360736740
+      TILEMAP_175: -185994266
       TILEMAP_147: -1370649635
       TILEMAP_74: -1154033378
       TILEMAP_32: -246585933

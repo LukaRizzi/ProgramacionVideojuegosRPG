@@ -10462,11 +10462,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6114721163295888140, guid: 11a47b1e167757a4c80a6c628120abb7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.62
+      value: 12.36
       objectReference: {fileID: 0}
     - target: {fileID: 6114721163295888140, guid: 11a47b1e167757a4c80a6c628120abb7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.03
+      value: 1.85
       objectReference: {fileID: 0}
     - target: {fileID: 6114721163295888140, guid: 11a47b1e167757a4c80a6c628120abb7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10547,7 +10547,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bonfires: []
-  coins: []
   coinText: {fileID: 264008094}
   bombText: {fileID: 2024592201}
   keyText: {fileID: 1721941998}
@@ -10731,7 +10730,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4868501351278479739, guid: dd6872e4e4b1274489a1745fef345cf7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dd6872e4e4b1274489a1745fef345cf7, type: 3}
 --- !u!1001 &1233758911
 PrefabInstance:

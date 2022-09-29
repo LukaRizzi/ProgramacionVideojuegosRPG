@@ -6,15 +6,20 @@ namespace RPGUNDAV.Gameplay{
     public class ExplosiveBehaviour : MonoBehaviour
     {
         public float timeTillExplosion;
+
+        public float explosionDuration;
         public float explosionRadius;
         private CircleCollider2D bombCollider;
         private float timeAtActivation;
+        private Animator animator;
         // Logica incompleta terminar explosion
         void Start()
         {
             bombCollider = GetComponentInParent<CircleCollider2D>();
+            animator = GetComponentInParent<Animator>();
             timeAtActivation = Time.fixedTime;
             bombCollider.enabled = false;
+            animator.speed = 1/timeTillExplosion;
         }
 
         // Update is called once per frame
@@ -23,6 +28,10 @@ namespace RPGUNDAV.Gameplay{
             if(Time.fixedTime >= timeAtActivation + timeTillExplosion){
                 bombCollider.enabled = true;
                 bombCollider.radius = explosionRadius;
+                if(Time.fixedTime >= timeAtActivation + timeTillExplosion + explosionDuration){
+                    //Cambio a animacion de explocion
+                    Destroy(this.gameObject);
+                }
             }
         }
 
@@ -31,7 +40,6 @@ namespace RPGUNDAV.Gameplay{
             if(other.CompareTag("PlayerHurtBox")){
                 GameObject playerHurtBox = other.gameObject;
                 playerHurtBox.GetComponentInParent<PlayerStateManager>().Attacked(this.gameObject);
-                Destroy(this.gameObject);
             }
         }
     }

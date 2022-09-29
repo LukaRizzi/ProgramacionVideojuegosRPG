@@ -116,9 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeTillExplosion: 3
+  explosionDuration: 0.5
   explosionRadius: 1.5
-  damageToEnemies: 0
-  damageToPlayer: 0
 --- !u!95 &1196473188005241922
 Animator:
   serializedVersion: 4

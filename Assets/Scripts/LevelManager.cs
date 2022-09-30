@@ -23,9 +23,9 @@ namespace RPGUNDAV.Gameplay
 
         #region UPDATE_PLAYER_HUD
         public void Update(){
-            coinText.text = "$ "+ GameManager.Instance.playerCoins;
-            bombText.text = "B "+ GameManager.Instance.playerBombs;
-            keyText.text = "K "+ GameManager.Instance.playerKeys;
+            coinText.text = ""+GameManager.Instance.playerCoins;
+            bombText.text = ""+ GameManager.Instance.playerBombs;
+            keyText.text = ""+ GameManager.Instance.playerKeys;
         }
 
         public void AddPickUpToPlayer(PickUp pickup, int quantity){

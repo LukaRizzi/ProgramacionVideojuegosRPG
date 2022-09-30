@@ -4483,7 +4483,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4491,6 +4491,69 @@ TextureImporter:
       bones: []
       spriteID: b82657c4a60542a439d6126d29085017
       internalID: -817162542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILEMAP_207
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ccea777d754fb46badb34c24f3da43
+      internalID: 1719378790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILEMAP_208
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c8eb2976b45f24d96ea50c7cc66656
+      internalID: -1871305391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILEMAP_209
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e43dba55c548ae449c1a4a7fa7921d9
+      internalID: -1049940646
       vertices: []
       indices: 
       edges: []
@@ -4579,8 +4642,10 @@ TextureImporter:
       TILEMAP_62: 1081156243
       TILEMAP_98: 269027066
       TILEMAP_162: 1826093615
+      TILEMAP_207: 1719378790
       TILEMAP_155: 1510103873
       TILEMAP_100: 1407969743
+      TILEMAP_208: -1871305391
       TILEMAP_65: -1507335585
       TILEMAP_37: 332424250
       TILEMAP_157: -1995493501
@@ -4594,6 +4659,7 @@ TextureImporter:
       TILEMAP_38: 1744050080
       TILEMAP_20: 1682919783
       TILEMAP_67: -805743453
+      TILEMAP_209: -1049940646
       TILEMAP_18: -229144058
       TILEMAP_144: 149829816
       TILEMAP_60: -1463842704

@@ -6,20 +6,24 @@ namespace RPGUNDAV.Gameplay{
     public class ExplosiveBehaviour : MonoBehaviour
     {
         public float timeTillExplosion;
-
         public float explosionDuration;
-        public float explosionRadius;
-        private CircleCollider2D bombCollider;
+        public Vector2 explosionDistance;
+        public Sprite visibleReachShape;
+        private BoxCollider2D bombCollider;
         private float timeAtActivation;
         private Animator animator;
+        private GameObject visibleReach;
         // Logica incompleta terminar explosion
         void Start()
         {
-            bombCollider = GetComponentInParent<CircleCollider2D>();
+            bombCollider = GetComponentInParent<BoxCollider2D>();
             animator = GetComponentInParent<Animator>();
             timeAtActivation = Time.fixedTime;
             bombCollider.enabled = false;
             animator.speed = 1/timeTillExplosion;
+            visibleReach = new GameObject();
+            visibleReach.AddComponent<Transform>();
+            visibleReach.AddComponent<SpriteRenderer>();
         }
 
         // Update is called once per frame
@@ -27,9 +31,11 @@ namespace RPGUNDAV.Gameplay{
         {
             if(Time.fixedTime >= timeAtActivation + timeTillExplosion){
                 bombCollider.enabled = true;
-                bombCollider.radius = explosionRadius;
+                bombCollider.size = explosionDistance;
+
+                createVisibleReach();
                 if(Time.fixedTime >= timeAtActivation + timeTillExplosion + explosionDuration){
-                    //Cambio a animacion de explocion
+                    Destroy(visibleReach);
                     Destroy(this.gameObject);
                 }
             }
@@ -41,6 +47,15 @@ namespace RPGUNDAV.Gameplay{
                 GameObject playerHurtBox = other.gameObject;
                 playerHurtBox.GetComponentInParent<PlayerStateManager>().Attacked(this.gameObject);
             }
+        }
+
+        private void createVisibleReach(){
+            Transform visibleReachTF = visibleReach.GetComponent<Transform>();
+            SpriteRenderer sr = visibleReach.GetComponent<SpriteRenderer>();
+            visibleReachTF.position = this.gameObject.transform.position;
+            visibleReachTF.localScale = new Vector3(explosionDistance.x,explosionDistance.y, 0f);
+            sr.sprite = visibleReachShape;
+            sr.color = new Color(1,0,0,0.7f);
         }
     }
 }

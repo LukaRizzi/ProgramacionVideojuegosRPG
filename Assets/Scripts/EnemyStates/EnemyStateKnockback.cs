@@ -31,5 +31,10 @@ namespace RPGUNDAV.Gameplay
         {
             
         }
+
+        public override void OnSight(EnemyStateManager manager, GameObject player)
+        {
+
+        }
     }
 }

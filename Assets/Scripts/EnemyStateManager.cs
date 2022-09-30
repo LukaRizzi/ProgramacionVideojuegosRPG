@@ -20,7 +20,11 @@ namespace RPGUNDAV.Gameplay
 
         public float raycastWallDistance = 1f;
 
+        public float raycastPlayerDistance = 5f;
+
         public LayerMask whatIsSolid;
+
+        public LayerMask whatIsPlayer;
 
         public EnemyState defaultState;
         private EnemyState state;
@@ -68,6 +72,11 @@ namespace RPGUNDAV.Gameplay
         public void Attacked(GameObject player) 
         {
             state.OnAttacked(this, player);
+        }
+
+        public void OnSight(GameObject player)
+        {
+            state.OnSight(this, player);
         }
     }
 }

@@ -10,6 +10,7 @@ namespace RPGUNDAV.Gameplay
         public abstract void UpdateState(EnemyStateManager manager);
         public abstract void OnCollisionWithPlayer(EnemyStateManager manager, GameObject player);
         public abstract void OnAttacked(EnemyStateManager manager, GameObject player);
+        public abstract void OnSight(EnemyStateManager manager, GameObject player);
 
     }
 }

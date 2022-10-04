@@ -15,45 +15,27 @@ namespace RPGUNDAV.Gameplay
         [SerializeField] TMP_Text bombText;
         [SerializeField] TMP_Text keyText;
 
+        public GameObject player;
+
+        public PlayerUsables playerUsables;
+
         private void Start()
         {
             levelName = SceneManager.GetActiveScene().name;
             bonfires = GameObject.FindGameObjectsWithTag("Bonfire").ToList();
+            player = GameObject.FindGameObjectWithTag("Player");
+            playerUsables = player.GetComponent<PlayerUsables>();
         }
 
         #region UPDATE_PLAYER_HUD
         public void Update(){
-            coinText.text = ""+GameManager.Instance.playerCoins;
-            bombText.text = ""+ GameManager.Instance.playerBombs;
-            keyText.text = ""+ GameManager.Instance.playerKeys;
+            coinText.text = ""+playerUsables.GetUsableCount(PickUp.COIN);
+            bombText.text = ""+playerUsables.GetUsableCount(PickUp.BOMB);
+            keyText.text = ""+playerUsables.GetUsableCount(PickUp.KEY);
         }
 
         public void AddPickUpToPlayer(PickUp pickup, int quantity){
-            switch(pickup){
-                case PickUp.BOMB:
-                    GameManager.Instance.playerBombs += quantity;
-                    PlayerPrefs.SetInt("bombs", GameManager.Instance.playerBombs);
-                    break;
-                case PickUp.COIN:
-                    GameManager.Instance.playerCoins += quantity;
-                    PlayerPrefs.SetInt("coins", GameManager.Instance.playerCoins);
-                    break;
-                case PickUp.KEY:
-                    GameManager.Instance.playerKeys += quantity;
-                    PlayerPrefs.SetInt("keys", GameManager.Instance.playerKeys);
-                    break;
-                default:
-                    break;
-            }
-        }
-        public int getPlayerCoins(){
-            return GameManager.Instance.playerCoins;
-        }
-        public int getPlayerBombs(){
-            return GameManager.Instance.playerBombs;
-        }
-        public int getPlayerKeys(){
-            return GameManager.Instance.playerKeys;
+            playerUsables.AddUsable(pickup, quantity);
         }
         #endregion
     }

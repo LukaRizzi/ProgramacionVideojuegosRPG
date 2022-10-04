@@ -8,10 +8,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public int playerCoins;
-    public int playerBombs;
-    public int playerKeys;
-
     public Vector3 newPos;
 
     public bool loadSaveSpot = false;
@@ -28,10 +24,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         SceneManager.sceneLoaded += OnSceneLoaded;
-
-        playerCoins = PlayerPrefs.GetInt("coins", 0);
-        playerBombs = PlayerPrefs.GetInt("bombs", 0);
-        playerKeys = PlayerPrefs.GetInt("keys", 0);
 
         if (PlayerPrefs.HasKey("saveSpotScene") && loadSaveSpot)
         {

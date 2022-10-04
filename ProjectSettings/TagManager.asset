@@ -7,6 +7,7 @@ TagManager:
   - Bonfire
   - PlayerHurtBox
   - Coin
+  - Destructible
   layers:
   - Default
   - TransparentFX

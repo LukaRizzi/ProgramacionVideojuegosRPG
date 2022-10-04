@@ -10,7 +10,7 @@ public class OneTimePickup : MonoBehaviour
     private void Start()
     {
         ID = SceneManager.GetActiveScene().name + "." + (Mathf.Round(transform.position.x * 10)/10).ToString() + "." + (Mathf.Round(transform.position.y * 10) / 10).ToString();
-        Debug.Log(ID);
+        //Debug.Log(ID);
 
         if (PlayerPrefs.GetInt(ID, 0) == 1)
             Destroy(this.gameObject);

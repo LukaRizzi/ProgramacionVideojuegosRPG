@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace RPGUNDAV.Gameplay{
     public class ExplosiveBehaviour : MonoBehaviour
@@ -22,7 +21,6 @@ namespace RPGUNDAV.Gameplay{
             bombCollider.enabled = false;
             animator.speed = 1/timeTillExplosion;
             visibleReach = new GameObject();
-            visibleReach.AddComponent<Transform>();
             visibleReach.AddComponent<SpriteRenderer>();
         }
 
@@ -33,7 +31,7 @@ namespace RPGUNDAV.Gameplay{
                 bombCollider.enabled = true;
                 bombCollider.size = explosionDistance;
 
-                createVisibleReach();
+                CreateVisibleReach();
                 if(Time.fixedTime >= timeAtActivation + timeTillExplosion + explosionDuration){
                     Destroy(visibleReach);
                     Destroy(this.gameObject);
@@ -47,9 +45,25 @@ namespace RPGUNDAV.Gameplay{
                 GameObject playerHurtBox = other.gameObject;
                 playerHurtBox.GetComponentInParent<PlayerStateManager>().Attacked(this.gameObject);
             }
+
+            if(other.gameObject.CompareTag("Destructible")){
+                Tilemap tilemap = other.gameObject.GetComponent<Tilemap>();
+                Vector3Int tilePosition = tilemap.LocalToCell(this.transform.position);
+                if(tilemap.GetTile(tilePosition) != null){
+                    tilemap.SetTile(tilePosition,null);
+                }
+                /*
+
+                foreach(Tile tile in tilemap.){
+                    Vector3Int position = tilemap.LocalToCell(new Vector3(_contact.point.x, _contact.point.y,0));
+                    if(tilemap.HasTile(position)){
+                        tilemap.SetTile(position,null);
+                    }
+                } */
+            }
         }
 
-        private void createVisibleReach(){
+        private void CreateVisibleReach(){
             Transform visibleReachTF = visibleReach.GetComponent<Transform>();
             SpriteRenderer sr = visibleReach.GetComponent<SpriteRenderer>();
             visibleReachTF.position = this.gameObject.transform.position;

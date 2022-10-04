@@ -4546,7 +4546,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4554,6 +4554,90 @@ TextureImporter:
       bones: []
       spriteID: 4e43dba55c548ae449c1a4a7fa7921d9
       internalID: -1049940646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILEMAP_210
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb9b5d69841ea34992e50ef5893f030
+      internalID: 915161492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILEMAP_211
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c26bfed641c1348bdb4590130cb4d4
+      internalID: -1013204675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILEMAP_212
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7b4366cb362774bb83cddd284fccdb
+      internalID: 1564419836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILEMAP_213
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23db652b94cf7a47b3694b311677458
+      internalID: -1080141966
       vertices: []
       indices: 
       edges: []
@@ -4591,6 +4675,7 @@ TextureImporter:
       TILEMAP_59: -250375495
       TILEMAP_178: -2099518412
       TILEMAP_2: 1011366326
+      TILEMAP_212: 1564419836
       TILEMAP_13: -37662107
       TILEMAP_5: 687842154
       TILEMAP_25: -1503129087
@@ -4652,12 +4737,14 @@ TextureImporter:
       TILEMAP_22: -1039261946
       TILEMAP_70: 2092288697
       TILEMAP_83: -822924667
+      TILEMAP_210: 915161492
       TILEMAP_10: 1951637048
       TILEMAP_57: 302253287
       TILEMAP_31: 1928061054
       TILEMAP_186: -2021718031
       TILEMAP_38: 1744050080
       TILEMAP_20: 1682919783
+      TILEMAP_213: -1080141966
       TILEMAP_67: -805743453
       TILEMAP_209: -1049940646
       TILEMAP_18: -229144058
@@ -4676,6 +4763,7 @@ TextureImporter:
       TILEMAP_84: 220492832
       TILEMAP_146: 40743881
       TILEMAP_153: -95063533
+      TILEMAP_211: -1013204675
       TILEMAP_96: 1014459394
       TILEMAP_89: -24397896
       TILEMAP_81: -1190310397
@@ -4730,6 +4818,7 @@ TextureImporter:
       TILEMAP_27: 778796324
       TILEMAP_199: 1688601545
       TILEMAP_161: -927436780
+      TILEMAP_214: 468541632
       TILEMAP_195: 527911076
       TILEMAP_151: -1109182746
       TILEMAP_156: 881794104

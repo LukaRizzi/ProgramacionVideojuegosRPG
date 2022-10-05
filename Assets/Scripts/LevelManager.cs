@@ -19,6 +19,8 @@ namespace RPGUNDAV.Gameplay
 
         public PlayerUsables playerUsables;
 
+        public DisplayLives displayLives;
+
         private void Start()
         {
             levelName = SceneManager.GetActiveScene().name;

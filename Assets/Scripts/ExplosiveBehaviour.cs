@@ -1,5 +1,7 @@
+using System.Diagnostics.Contracts;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 namespace RPGUNDAV.Gameplay{
     public class ExplosiveBehaviour : MonoBehaviour
@@ -41,25 +43,34 @@ namespace RPGUNDAV.Gameplay{
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if(other.CompareTag("PlayerHurtBox")){
+            if (other.CompareTag("PlayerHurtBox"))
+            {
                 GameObject playerHurtBox = other.gameObject;
                 playerHurtBox.GetComponentInParent<PlayerStateManager>().Attacked(this.gameObject);
             }
 
-            if(other.gameObject.CompareTag("Destructible")){
+            if (other.gameObject.layer == 7) //7 es EnemyLayer
+            {
+                EnemyStateManager enemyManager = other.GetComponent<EnemyStateManager>();
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                enemyManager.Attacked(this.gameObject);
+            }
+
+            if (other.gameObject.CompareTag("Destructible")){
                 Tilemap tilemap = other.gameObject.GetComponent<Tilemap>();
                 Vector3Int tilePosition = tilemap.LocalToCell(this.transform.position);
                 if(tilemap.GetTile(tilePosition) != null){
                     tilemap.SetTile(tilePosition,null);
                 }
-                /*
 
-                foreach(Tile tile in tilemap.){
+                /*
+                foreach(Tile tile in tilemap){
                     Vector3Int position = tilemap.LocalToCell(new Vector3(_contact.point.x, _contact.point.y,0));
                     if(tilemap.HasTile(position)){
                         tilemap.SetTile(position,null);
                     }
-                } */
+                }
+                */
             }
         }
 

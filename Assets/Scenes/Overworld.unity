@@ -687,8 +687,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 329, y: -275}
-  m_SizeDelta: {x: 239.44, y: 175.42}
+  m_AnchoredPosition: {x: 178.2, y: -185.1}
+  m_SizeDelta: {x: 91.9, y: 61.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &264008094
 MonoBehaviour:
@@ -710,7 +710,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' 0'
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -737,15 +737,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 54.95
   m_fontSizeBase: 72
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 34.3
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -9091,7 +9091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -170.3, y: 50.3}
+  m_AnchoredPosition: {x: -99.6, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &798944633
@@ -9167,7 +9167,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -170.6, y: 37.3}
+  m_AnchoredPosition: {x: -99.6, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &825199286
@@ -11064,8 +11064,9 @@ MonoBehaviour:
   coinText: {fileID: 264008094}
   bombText: {fileID: 2024592201}
   keyText: {fileID: 1721941998}
-  player: {fileID: 0}
+  player: {fileID: 1881793176}
   playerUsables: {fileID: 0}
+  displayLives: {fileID: 633889934}
 --- !u!1001 &942204325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11167,7 +11168,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -170, y: 50.30002}
+  m_AnchoredPosition: {x: -99.6, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &972131435
@@ -14421,8 +14422,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 812.7001, y: -267}
-  m_SizeDelta: {x: 239.44, y: 151.7}
+  m_AnchoredPosition: {x: 582.59985, y: -185.10004}
+  m_SizeDelta: {x: 91.9, y: 61.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1721941998
 MonoBehaviour:
@@ -14471,15 +14472,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 55.3
   m_fontSizeBase: 72
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 34.3
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -14837,6 +14838,11 @@ CompositeCollider2D:
       - {x: 20.000029, y: 3}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!1 &1881793176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3535363347179166077, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
+  m_PrefabInstance: {fileID: 2049210272}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1902116869
 GameObject:
   m_ObjectHideFlags: 0
@@ -14949,8 +14955,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 570, y: -275}
-  m_SizeDelta: {x: 239.44, y: 175.42}
+  m_AnchoredPosition: {x: 388.49982, y: -185.10004}
+  m_SizeDelta: {x: 91.9, y: 61.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2024592201
 MonoBehaviour:
@@ -14999,15 +15005,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 54.95
   m_fontSizeBase: 72
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 34.3
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

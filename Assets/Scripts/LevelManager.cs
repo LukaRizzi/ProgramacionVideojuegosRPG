@@ -15,9 +15,8 @@ namespace RPGUNDAV.Gameplay
         [SerializeField] TMP_Text bombText;
         [SerializeField] TMP_Text keyText;
 
-        public GameObject player;
-
-        public PlayerUsables playerUsables;
+        [HideInInspector] public GameObject player;
+        [HideInInspector] public PlayerUsables playerUsables;
 
         public DisplayLives displayLives;
 

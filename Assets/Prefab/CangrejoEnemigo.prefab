@@ -110,9 +110,13 @@ MonoBehaviour:
   sr: {fileID: 929572255805542524}
   animator: {fileID: 799904378}
   raycastWallDistance: 0.75
+  raycastPlayerDistance: 5
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &929572255805542514
 MonoBehaviour:
   m_ObjectHideFlags: 0

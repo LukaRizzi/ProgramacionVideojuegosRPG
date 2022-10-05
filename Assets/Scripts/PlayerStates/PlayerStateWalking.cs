@@ -47,11 +47,18 @@ namespace RPGUNDAV.Gameplay
                 }
             }
             #endregion
+
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                manager.hpManager.Hp++;
+                manager.levelManager.displayLives.AddHeart();
+            }
         }
 
         public override void OnAttacked(PlayerStateManager manager, GameObject enemy)
         {
             manager.hpManager.Hp--;
+            manager.levelManager.displayLives.RemoveHeart();
 
             Vector2 dir = (manager.transform.position - enemy.transform.position).normalized;
             manager.rb.velocity = dir * 10;

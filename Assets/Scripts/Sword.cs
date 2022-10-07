@@ -9,6 +9,16 @@ namespace RPGUNDAV.Gameplay
     {
         [SerializeField] private Animator anim;
 
+        public float secondsToFullyCharge = 1;
+
+        public float normalAttackSpeed = 3;
+
+        public float chargedAttackSpeed = 1;
+
+        private float timeWhenKeyPressed;
+
+        private bool isCharging = false;
+
         private void Start()
         {
             anim = GetComponentInChildren<Animator>();
@@ -16,8 +26,31 @@ namespace RPGUNDAV.Gameplay
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.V))
+            /*if (Input.GetKeyDown(KeyCode.V)){
                 anim.SetTrigger("attack");
+                anim.speed = normalAttackSpeed;
+                timeWhenKeyPressed = Time.fixedTime;
+            }*/
+            if (Input.GetKey(KeyCode.V)){
+                if(isCharging){
+                    anim.SetTrigger("charge");
+                    anim.speed = 1/secondsToFullyCharge;
+                }else{
+                    anim.SetTrigger("attack");
+                    anim.speed = normalAttackSpeed;
+                    timeWhenKeyPressed = Time.fixedTime;
+                    isCharging=true;
+                }
+            }
+
+            if(Input.GetKeyUp(KeyCode.V)){
+                if(Time.fixedTime >= timeWhenKeyPressed + secondsToFullyCharge ){
+                    anim.SetTrigger("chargedattack");
+                    anim.speed = chargedAttackSpeed;
+                }
+                isCharging=false;
+            }
+
         }
 
         private void OnTriggerEnter2D(Collider2D collision)

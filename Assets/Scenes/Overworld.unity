@@ -13974,6 +13974,18 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 1795874715}
+    - target: {fileID: 651386061, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
+      propertyPath: normalAttackSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 651386061, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
+      propertyPath: chargedAttackSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 651386061, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
+      propertyPath: secondsToFullyCharge
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3535363347179166019, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
       propertyPath: m_RootOrder
       value: 2

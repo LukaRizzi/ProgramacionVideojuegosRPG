@@ -14,7 +14,6 @@ namespace RPGUNDAV.Gameplay{
         private float timeAtActivation;
         private Animator animator;
         private GameObject visibleReach;
-        // Logica incompleta terminar explosion
         void Start()
         {
             bombCollider = GetComponentInParent<BoxCollider2D>();
@@ -57,22 +56,25 @@ namespace RPGUNDAV.Gameplay{
             }
 
             if (other.gameObject.CompareTag("Destructible")){
-                Tilemap tilemap = other.gameObject.GetComponent<Tilemap>();
-                Vector3Int tilePosition = tilemap.LocalToCell(this.transform.position);
-                if(tilemap.GetTile(tilePosition) != null){
-                    tilemap.SetTile(tilePosition,null);
-                }
-
-                /*
-                foreach(Tile tile in tilemap){
-                    Vector3Int position = tilemap.LocalToCell(new Vector3(_contact.point.x, _contact.point.y,0));
-                    if(tilemap.HasTile(position)){
-                        tilemap.SetTile(position,null);
-                    }
-                }
-                */
+                Destroy(other.gameObject);
             }
         }
+
+
+        /*void OnCollisionEnter2D(Collision2D collision){
+
+            Debug.Log(collision.gameObject);
+            if (collision.gameObject.CompareTag("Destructible")){
+                Tilemap tilemap = collision.gameObject.GetComponentInParent<Tilemap>();
+                Vector3 hitPosition = Vector3.zero;
+                foreach (ContactPoint2D hit in collision.contacts)
+                {
+                    hitPosition.x = hit.point.x * hit.normal.x;
+                    hitPosition.y = hit.point.y * hit.normal.y;
+                    tilemap.SetTile(tilemap.WorldToCell(hitPosition), null);
+                }
+            }
+        }*/
 
         private void CreateVisibleReach(){
             Transform visibleReachTF = visibleReach.GetComponent<Transform>();

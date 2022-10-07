@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4565667267365745477}
   - component: {fileID: 1196473188005241922}
   - component: {fileID: 8593126987393496602}
+  - component: {fileID: 1509532463578410930}
   m_Layer: 0
   m_Name: BombUsable
   m_TagString: Untagged
@@ -99,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47ecbab79072de4b8a15018086397fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeTillExplosion: 3
+  timeTillExplosion: 5
   explosionDuration: 0.1
   explosionDistance: {x: 3, y: 3}
   visibleReachShape: {fileID: -1049940646, guid: 327c007ea7da0b840b502db6d50b8693, type: 3}
@@ -149,3 +150,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9585705, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1509532463578410930
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4868501351278479716}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0

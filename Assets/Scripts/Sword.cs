@@ -1,7 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 namespace RPGUNDAV.Gameplay
 {
@@ -9,45 +8,44 @@ namespace RPGUNDAV.Gameplay
     {
         [SerializeField] private Animator anim;
 
-        public float secondsToFullyCharge = 1;
-
+        public int secondsToFullyCharge = 1;
+        public float idleSpeed = 1;
         public float normalAttackSpeed = 3;
-
         public float chargedAttackSpeed = 1;
 
         private float timeWhenKeyPressed;
 
         private bool isCharging = false;
 
+        private AnimationClip clip;
+
         private void Start()
         {
             anim = GetComponentInChildren<Animator>();
+            anim.SetFloat("idleSpeed",idleSpeed);
+            anim.SetFloat("normalAttackSpeed", normalAttackSpeed);
+            anim.SetFloat("chargeSpeed", 1/secondsToFullyCharge);
+            anim.SetFloat("chargedAttackSpeed", chargedAttackSpeed);
         }
 
         private void Update()
         {
-            /*if (Input.GetKeyDown(KeyCode.V)){
-                anim.SetTrigger("attack");
-                anim.speed = normalAttackSpeed;
+            if (Input.GetKeyDown(KeyCode.V)){
+                anim.SetTrigger("normalAttack");
                 timeWhenKeyPressed = Time.fixedTime;
-            }*/
+                isCharging=true;
+            }
             if (Input.GetKey(KeyCode.V)){
                 if(isCharging){
-                    anim.SetTrigger("charge");
-                    anim.speed = 1/secondsToFullyCharge;
-                }else{
-                    anim.SetTrigger("attack");
-                    anim.speed = normalAttackSpeed;
-                    timeWhenKeyPressed = Time.fixedTime;
-                    isCharging=true;
+                    anim.SetBool("charge",true);
                 }
-            }
+            }  
 
             if(Input.GetKeyUp(KeyCode.V)){
                 if(Time.fixedTime >= timeWhenKeyPressed + secondsToFullyCharge ){
-                    anim.SetTrigger("chargedattack");
-                    anim.speed = chargedAttackSpeed;
+                    anim.SetTrigger("chargedAttack");
                 }
+                anim.SetBool("charge",false);
                 isCharging=false;
             }
 

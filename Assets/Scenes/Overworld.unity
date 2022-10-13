@@ -13942,6 +13942,11 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 651386062, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
   m_PrefabInstance: {fileID: 2049210272}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &1795874718 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 651386060, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
+  m_PrefabInstance: {fileID: 2049210272}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1881793176 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3535363347179166077, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
@@ -13975,16 +13980,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1795874715}
     - target: {fileID: 651386061, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
+      propertyPath: coll
+      value: 
+      objectReference: {fileID: 1795874718}
+    - target: {fileID: 651386061, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
+      propertyPath: keycode
+      value: 118
+      objectReference: {fileID: 0}
+    - target: {fileID: 651386061, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
+      propertyPath: attackKey
+      value: 118
+      objectReference: {fileID: 0}
+    - target: {fileID: 651386061, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
+      propertyPath: teclaAtacar
+      value: 118
+      objectReference: {fileID: 0}
+    - target: {fileID: 651386061, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
       propertyPath: normalAttackSpeed
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 651386061, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
       propertyPath: chargedAttackSpeed
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 651386061, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
       propertyPath: secondsToFullyCharge
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3535363347179166019, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
       propertyPath: m_RootOrder

@@ -65,6 +65,7 @@ namespace RPGUNDAV.Gameplay
 
             manager.ChangeState(new PlayerStateKnockback());
             manager.swordHolder.gameObject.SetActive(false);
+            manager.swordHolder.gameObject.GetComponentInChildren<Sword>().Reset();
         }
     }
 }

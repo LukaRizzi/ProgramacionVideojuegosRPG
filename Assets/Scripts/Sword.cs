@@ -7,46 +7,43 @@ namespace RPGUNDAV.Gameplay
     public class Sword : MonoBehaviour
     {
         [SerializeField] private Animator anim;
-
-        public int secondsToFullyCharge = 1;
+        [SerializeField] private KeyCode attackKey;
+        [SerializeField] private SpriteRenderer spriteRenderer;
+        public float secondsToFullyCharge = 1;
+        public float secondsToStartCharging = 0.1f;
         public float idleSpeed = 1;
-        public float normalAttackSpeed = 3;
+        public float normalAttackSpeed = 2;
         public float chargedAttackSpeed = 1;
+        private Boolean _isNewAttack = true;
+        private float _timeStartCharge;
 
-        private float timeWhenKeyPressed;
-
-        private bool isCharging = false;
-
-        private AnimationClip clip;
+        private Quaternion _originalRotation;
+        private Color _originalColor;
 
         private void Start()
         {
             anim = GetComponentInChildren<Animator>();
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             anim.SetFloat("idleSpeed",idleSpeed);
             anim.SetFloat("normalAttackSpeed", normalAttackSpeed);
             anim.SetFloat("chargeSpeed", 1/secondsToFullyCharge);
             anim.SetFloat("chargedAttackSpeed", chargedAttackSpeed);
+            _originalRotation = transform.rotation;
+            _originalColor = spriteRenderer.color;
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.V)){
-                anim.SetTrigger("normalAttack");
-                timeWhenKeyPressed = Time.fixedTime;
-                isCharging=true;
+            if (Input.GetKeyDown(attackKey)){
+                Attack();
             }
-            if (Input.GetKey(KeyCode.V)){
-                if(isCharging){
-                    anim.SetBool("charge",true);
-                }
+    
+            if (Input.GetKey(attackKey)){
+                Charge();
             }  
 
-            if(Input.GetKeyUp(KeyCode.V)){
-                if(Time.fixedTime >= timeWhenKeyPressed + secondsToFullyCharge ){
-                    anim.SetTrigger("chargedAttack");
-                }
-                anim.SetBool("charge",false);
-                isCharging=false;
+            if(Input.GetKeyUp(attackKey)){
+                AttackCharged();
             }
 
         }
@@ -61,6 +58,33 @@ namespace RPGUNDAV.Gameplay
                 GameObject player = GameObject.FindGameObjectWithTag("Player");
                 enemyManager.Attacked(player);
             }
+        }
+
+        private void Attack(){
+            anim.SetBool("charge",false);
+            anim.SetTrigger("normalAttack");
+            _isNewAttack = true;
+        }
+
+        private void Charge(){
+            if(_isNewAttack){
+                _timeStartCharge = Time.fixedTime;
+                anim.SetBool("charge",true); 
+            }
+            _isNewAttack = false;
+        }
+
+        private void AttackCharged(){
+            if(Time.fixedTime >= _timeStartCharge + secondsToFullyCharge){
+                anim.SetTrigger("chargedAttack");
+            }else{
+                anim.SetBool("charge",false);
+            }
+        }
+
+        public void Reset(){
+           transform.rotation = _originalRotation;
+           spriteRenderer.color = _originalColor;
         }
     }
 }

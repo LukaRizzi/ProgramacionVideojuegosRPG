@@ -6,9 +6,7 @@ namespace RPGUNDAV.Gameplay
 {
     public class Sword : MonoBehaviour
     {
-        [SerializeField] private Animator anim;
         [SerializeField] private KeyCode attackKey;
-        [SerializeField] private SpriteRenderer spriteRenderer;
         public float secondsToFullyCharge = 1;
         public float secondsToStartCharging = 0.1f;
         public float idleSpeed = 1;
@@ -16,18 +14,19 @@ namespace RPGUNDAV.Gameplay
         public float chargedAttackSpeed = 1;
         private Boolean _isNewAttack = true;
         private float _timeStartCharge;
-
         private Quaternion _originalRotation;
         private Color _originalColor;
+        private Animator animator;
+        private SpriteRenderer spriteRenderer;
 
         private void Start()
         {
-            anim = GetComponentInChildren<Animator>();
+            animator = GetComponentInChildren<Animator>();
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-            anim.SetFloat("idleSpeed",idleSpeed);
-            anim.SetFloat("normalAttackSpeed", normalAttackSpeed);
-            anim.SetFloat("chargeSpeed", 1/secondsToFullyCharge);
-            anim.SetFloat("chargedAttackSpeed", chargedAttackSpeed);
+            animator.SetFloat("idleSpeed",idleSpeed);
+            animator.SetFloat("normalAttackSpeed", normalAttackSpeed);
+            animator.SetFloat("chargeSpeed", 1/secondsToFullyCharge);
+            animator.SetFloat("chargedAttackSpeed", chargedAttackSpeed);
             _originalRotation = transform.rotation;
             _originalColor = spriteRenderer.color;
         }
@@ -61,24 +60,24 @@ namespace RPGUNDAV.Gameplay
         }
 
         private void Attack(){
-            anim.SetBool("charge",false);
-            anim.SetTrigger("normalAttack");
+            animator.SetBool("charge",false);
+            animator.SetTrigger("normalAttack");
             _isNewAttack = true;
         }
 
         private void Charge(){
             if(_isNewAttack){
                 _timeStartCharge = Time.fixedTime;
-                anim.SetBool("charge",true); 
+                animator.SetBool("charge",true); 
             }
             _isNewAttack = false;
         }
 
         private void AttackCharged(){
             if(Time.fixedTime >= _timeStartCharge + secondsToFullyCharge){
-                anim.SetTrigger("chargedAttack");
+                animator.SetTrigger("chargedAttack");
             }else{
-                anim.SetBool("charge",false);
+                animator.SetBool("charge",false);
             }
         }
 

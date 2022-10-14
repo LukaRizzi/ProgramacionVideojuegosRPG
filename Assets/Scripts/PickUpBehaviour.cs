@@ -8,7 +8,7 @@ namespace RPGUNDAV.Gameplay
         public int value = 1;
         [SerializeField] private LevelManager lm;
 
-        [SerializeField] private ParticleSystem particleSystem;
+        [SerializeField] private ParticleSystem ps;
 
         public PickUp pickUp;
         
@@ -22,11 +22,11 @@ namespace RPGUNDAV.Gameplay
             {
                 lm.AddPickUpToPlayer(pickUp,value);
 
-                if (particleSystem != null)
+                if (ps != null)
                 {
-                    particleSystem.transform.parent = null;
-                    particleSystem.Emit(30);
-                    Destroy(particleSystem.gameObject, 2f);
+                    ps.transform.parent = null;
+                    ps.Emit(30);
+                    Destroy(ps.gameObject, 2f);
                 }
 
                 OneTimePickup OTPickup = GetComponent<OneTimePickup>();

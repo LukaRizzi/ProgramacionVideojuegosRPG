@@ -14001,7 +14001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 651386061, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
       propertyPath: chargedAttackSpeed
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 651386061, guid: 2848729ac652941488678c27c8dd0f29, type: 3}
       propertyPath: secondsToFullyCharge

@@ -4651,7 +4651,7 @@ TextureImporter:
         width: 4
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4672,7 +4672,7 @@ TextureImporter:
         width: 4
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4693,7 +4693,7 @@ TextureImporter:
         width: 4
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4714,7 +4714,7 @@ TextureImporter:
         width: 4
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4722,6 +4722,48 @@ TextureImporter:
       bones: []
       spriteID: f4360b26e85234249a0265862235a027
       internalID: 664976802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILEMAP_218
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490e294bcb08c90488bbf26d1775c23d
+      internalID: 2022682465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILEMAP_219
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a72742875eaae94fac67fa1b3798b1c
+      internalID: 1668375624
       vertices: []
       indices: 
       edges: []
@@ -4831,6 +4873,7 @@ TextureImporter:
       TILEMAP_20: 1682919783
       TILEMAP_213: -1080141966
       TILEMAP_67: -805743453
+      TILEMAP_219: 2022682465
       TILEMAP_209: -1049940646
       TILEMAP_18: -229144058
       TILEMAP_144: 149829816
@@ -4846,6 +4889,7 @@ TextureImporter:
       TILEMAP_148: 2139449509
       TILEMAP_154: 1397922704
       TILEMAP_84: 220492832
+      TILEMAP_218: 448051197
       TILEMAP_146: 40743881
       TILEMAP_153: -95063533
       TILEMAP_211: -1013204675

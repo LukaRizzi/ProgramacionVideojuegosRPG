@@ -19,6 +19,8 @@ namespace RPGUNDAV.Gameplay
 
         private void Update()
         {
+
+            // TODO pasar esto al playerstatewalking
             if (Input.GetKeyDown(KeyCode.B) && usables[PickUp.BOMB] > 0){
                 usables[PickUp.BOMB] = usables[PickUp.BOMB] - 1;
                 PlayerPrefs.SetInt(PickUp.BOMB.ToString(), usables[PickUp.BOMB]);

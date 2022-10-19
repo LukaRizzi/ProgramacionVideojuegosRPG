@@ -55,11 +55,6 @@ namespace RPGUNDAV.Gameplay
 
             manager.ChangeState(new EnemyStateKnockback());
         }
-
-        public override void OnSight(EnemyStateManager manager, GameObject player)
-        {
-
-        }
     }
 
 }

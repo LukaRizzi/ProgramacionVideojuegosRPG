@@ -38,7 +38,7 @@ namespace RPGUNDAV.Gameplay
             RaycastHit2D hitPlayer = Physics2D.Raycast(manager.transform.position, manager.transform.right, manager.raycastPlayerDistance, manager.whatIsPlayer);
             if (hitPlayer)
             {
-                manager.OnSight(hitPlayer.transform.gameObject);
+                OnSight(manager, hitPlayer.transform.gameObject);
             }
         }
 
@@ -57,7 +57,7 @@ namespace RPGUNDAV.Gameplay
             manager.ChangeState(new EnemyStateKnockback());
         }
 
-        public override void OnSight(EnemyStateManager manager, GameObject player)
+        public void OnSight(EnemyStateManager manager, GameObject player)
         {
             Quaternion ignore = Quaternion.Euler(
                     manager.transform.rotation.eulerAngles.x,

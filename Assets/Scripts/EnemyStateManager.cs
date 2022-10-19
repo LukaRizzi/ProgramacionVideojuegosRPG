@@ -1,4 +1,5 @@
 using System;
+using UnityEditorInternal;
 using UnityEngine;
 
 namespace RPGUNDAV.Gameplay
@@ -72,11 +73,6 @@ namespace RPGUNDAV.Gameplay
         public void Attacked(GameObject player) 
         {
             state.OnAttacked(this, player);
-        }
-
-        public void OnSight(GameObject player)
-        {
-            state.OnSight(this, player);
         }
     }
 }

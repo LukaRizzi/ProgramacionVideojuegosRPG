@@ -34,6 +34,12 @@ namespace RPGUNDAV.Gameplay
             }
 
             Debug.DrawRay(manager.transform.position, manager.transform.right * manager.raycastWallDistance, Color.green, .01f);
+
+            RaycastHit2D hitPlayer = Physics2D.Raycast(manager.transform.position, manager.transform.right, manager.raycastPlayerDistance, manager.whatIsPlayer);
+            if (hitPlayer)
+            {
+                manager.OnSight(hitPlayer.transform.gameObject);
+            }
         }
 
         public override void OnCollisionWithPlayer(EnemyStateManager manager, GameObject player)
@@ -58,9 +64,7 @@ namespace RPGUNDAV.Gameplay
                     manager.transform.rotation.eulerAngles.y,
                     manager.transform.rotation.eulerAngles.z + 180);
 
-            RaycastHit2D hitPlayer = Physics2D.Raycast(manager.transform.position, manager.transform.right, manager.raycastPlayerDistance, manager.whatIsPlayer);
-
-            if(attackCooldownLeft <= 0f && hitPlayer){
+            if(attackCooldownLeft <= 0f){
             
                 #region Random Movement
 
@@ -90,10 +94,6 @@ namespace RPGUNDAV.Gameplay
             }
 
             Debug.DrawRay(manager.transform.position, manager.transform.right * manager.raycastPlayerDistance, Color.yellow, .01f);
-
-            
-
-            
         }
     }
 }

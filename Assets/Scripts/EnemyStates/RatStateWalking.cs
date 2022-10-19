@@ -29,8 +29,7 @@ namespace RPGUNDAV.Gameplay
             }
 
             manager.rb.velocity = dir;  
-            
-            
+
             //Debug.DrawRay(manager.transform.position, dir.normalized * manager.raycastWallDistance, Color.green, .01f);
         }
         

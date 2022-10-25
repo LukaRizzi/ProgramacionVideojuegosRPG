@@ -10,6 +10,8 @@ namespace RPGUNDAV.Gameplay
 
         [SerializeField] private ParticleSystem ps;
 
+        [SerializeField] int price = 0;
+
         public PickUp pickUp;
         
         private void Awake()
@@ -18,8 +20,10 @@ namespace RPGUNDAV.Gameplay
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.CompareTag("PlayerHurtBox"))
+            if (collision.CompareTag("PlayerHurtBox") && lm.playerUsables.usables[PickUp.COIN] >= price)
             {
+                lm.AddPickUpToPlayer(PickUp.COIN, -price);
+
                 lm.AddPickUpToPlayer(pickUp,value);
 
                 if (ps != null)

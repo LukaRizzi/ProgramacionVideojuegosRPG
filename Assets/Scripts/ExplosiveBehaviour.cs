@@ -14,6 +14,7 @@ namespace RPGUNDAV.Gameplay{
         private float timeAtActivation;
         private Animator animator;
         private GameObject visibleReach;
+
         void Start()
         {
             bombCollider = GetComponentInParent<BoxCollider2D>();

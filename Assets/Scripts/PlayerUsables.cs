@@ -10,7 +10,7 @@ namespace RPGUNDAV.Gameplay
         public int startingCoins = 1;
         public int startingKeys = 1;
         public GameObject bombPrefab;
-        private Dictionary<PickUp, int> usables;
+        public Dictionary<PickUp, int> usables;
         private Transform playerTransform;
         private void Start(){
             playerTransform = this.GetComponentInParent<Transform>();

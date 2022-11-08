@@ -2,35 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DisplayLives : MonoBehaviour
+namespace RPGUNDAV
 {
-    [SerializeField] GameObject[] lives;
-
-    public void AddHeart()
+    public class DisplayLives : MonoBehaviour
     {
-        foreach (GameObject go in lives)
+        [SerializeField] GameObject[] lives;
+
+        public void AddHeart()
         {
-            if (!go.activeSelf)
+            foreach (GameObject go in lives)
             {
-                go.SetActive(true);
-                return;
+                if (!go.activeSelf)
+                {
+                    go.SetActive(true);
+                    return;
+                }
             }
+
+            Debug.Log("Tenés vida máxima");
         }
 
-        Debug.Log("Tenés vida máxima");
-    }
-
-    public void RemoveHeart()
-    {
-        foreach (GameObject go in lives)
+        public void RemoveHeart()
         {
-            if (go.activeSelf)
+            foreach (GameObject go in lives)
             {
-                go.SetActive(false);
-                return;
+                if (go.activeSelf)
+                {
+                    go.SetActive(false);
+                    return;
+                }
             }
-        }
 
-        Debug.Log("Deberías estar muerto");
+            Debug.Log("Deberías estar muerto");
+        }
     }
 }

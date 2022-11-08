@@ -1,7 +1,7 @@
+using Mono.Cecil.Cil;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 namespace RPGUNDAV.Gameplay
 {
@@ -34,7 +34,19 @@ namespace RPGUNDAV.Gameplay
 
             #region ROTATE_SWORD
 
-            Vector3 vectorToTarget = Input.mousePosition - manager.swordHolder.position;
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 vectorToTarget = mousePosition - manager.swordHolder.position;
+            
+            if (Vector3.Dot(vectorToTarget, Vector3.right) > 0)
+            {
+                manager.swordHolder.localScale = Vector3.one;
+            }
+            else
+            {
+                manager.swordHolder.localScale = new Vector3(-1, 1, 1);
+                vectorToTarget *= -1;
+            }
+
             float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
             Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
             manager.swordHolder.rotation = q;

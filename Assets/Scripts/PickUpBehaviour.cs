@@ -16,7 +16,7 @@ namespace RPGUNDAV.Gameplay
         
         private void Awake()
         { 
-            if (lm == null) lm = GameObject.FindGameObjectWithTag("GameController").GetComponent<LevelManager>();
+            if (lm == null) lm = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {

@@ -1,12 +1,11 @@
 using System;
 using UnityEngine;
-using UnityEditor;
 
 namespace RPGUNDAV.Gameplay
 {
     public class Sword : MonoBehaviour
     {
-        [SerializeField] private KeyCode attackKey;
+        [SerializeField] private string attackButton;
         public float secondsToFullyCharge = 1;
         public float secondsToStartCharging = 0.1f;
         public float idleSpeed = 1;
@@ -33,15 +32,15 @@ namespace RPGUNDAV.Gameplay
 
         private void Update()
         {
-            if (Input.GetKeyDown(attackKey)){
+            if (Input.GetButtonDown(attackButton)){
                 Attack();
             }
     
-            if (Input.GetKey(attackKey)){
+            if (Input.GetButton(attackButton)){
                 Charge();
             }  
 
-            if(Input.GetKeyUp(attackKey)){
+            if(Input.GetButtonUp(attackButton)){
                 AttackCharged();
             }
 

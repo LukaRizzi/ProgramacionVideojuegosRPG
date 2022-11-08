@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da5039de0928b44a8f5c8a66dc496fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackKey: 118
+  attackButton: Attack
   secondsToFullyCharge: 2
   secondsToStartCharging: 0.1
   idleSpeed: 1

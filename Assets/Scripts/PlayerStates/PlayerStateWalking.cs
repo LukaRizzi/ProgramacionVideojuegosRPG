@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 namespace RPGUNDAV.Gameplay
 {
@@ -23,13 +24,21 @@ namespace RPGUNDAV.Gameplay
                 manager.animator.SetBool("walking", true);
                 manager.rb.velocity = _force;
                 manager.sr.flipX = Mathf.Sign(_force.x) < 0;
-                manager.swordHolder.localScale = new Vector3(manager.sr.flipX ? -1 : 1, 1,1);
             }
             else
             {
                 manager.animator.SetBool("walking", false);
                 manager.rb.velocity = Vector2.zero;
             }
+            #endregion
+
+            #region ROTATE_SWORD
+
+            Vector3 vectorToTarget = Input.mousePosition - manager.swordHolder.position;
+            float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+            Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+            manager.swordHolder.rotation = q;
+
             #endregion
 
             #region REST_CHECK

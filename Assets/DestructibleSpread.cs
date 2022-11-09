@@ -22,6 +22,8 @@ namespace RPGUNDAV
             hit = Physics2D.Raycast(transform.position, Vector3.left);
             if (hit && hit.transform.CompareTag("Destructible"))
                 Destroy(hit.transform.gameObject, timer);
+
+
         }
     }
 }

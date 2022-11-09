@@ -49,17 +49,23 @@ namespace RPGUNDAV.Gameplay
         private void OnTriggerEnter2D(Collider2D collision)
         {   
             GameObject collided = collision.gameObject;
-            
+
             if (collided.layer == 7)
             {
                 EnemyStateManager enemyManager = collision.GetComponent<EnemyStateManager>();
                 GameObject player = GameObject.FindGameObjectWithTag("Player");
                 enemyManager.Attacked(player);
             }
+
+            if (collided.layer == 9)
+            {
+                HPManager destroyable = collision.GetComponent<HPManager>();
+                destroyable.Hp--;
+            }
         }
 
         private void Attack(){
-            animator.SetBool("charge",false);
+            animator.SetBool("charge", false);
             animator.SetTrigger("normalAttack");
             _isNewAttack = true;
         }

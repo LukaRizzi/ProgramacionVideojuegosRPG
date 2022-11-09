@@ -4952,7 +4952,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1871305391, guid: 327c007ea7da0b840b502db6d50b8693, type: 3}
-  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5012,7 +5012,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 1
   lm: {fileID: 0}
-  particleSystem: {fileID: 1538665361533024413}
+  ps: {fileID: 0}
+  price: 0
   pickUp: 1
 --- !u!114 &1903209065551702963
 MonoBehaviour:

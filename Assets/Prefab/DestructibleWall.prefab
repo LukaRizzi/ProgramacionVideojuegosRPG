@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6785392484930925977}
   - component: {fileID: 6785392484930925976}
   - component: {fileID: 1510698569}
+  - component: {fileID: 1520049849}
   m_Layer: 0
   m_Name: DestructibleWall
   m_TagString: Destructible
@@ -122,5 +123,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a0e5f2269069104c870345a70c7ae11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1520049849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6785392484930925982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7173cc5a6cd1ba3498511c36c5abb575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

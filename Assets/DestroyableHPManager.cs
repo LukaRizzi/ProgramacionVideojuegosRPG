@@ -12,6 +12,13 @@ namespace RPGUNDAV.Gameplay
             if (drop != null)
                 Instantiate(drop, transform.position, Quaternion.identity);
 
+            OneTimePickup OTPickup = GetComponent<OneTimePickup>();
+
+            if (OTPickup != null)
+            {
+                OTPickup.PickedUp();
+            }
+
             Destroy(gameObject);
         }
     }

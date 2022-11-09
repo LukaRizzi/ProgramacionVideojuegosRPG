@@ -23,7 +23,12 @@ namespace RPGUNDAV
             if (hit && hit.transform.CompareTag("Destructible"))
                 Destroy(hit.transform.gameObject, timer);
 
+            OneTimePickup OTPickup = GetComponent<OneTimePickup>();
 
+            if (OTPickup != null)
+            {
+                OTPickup.PickedUp();
+            }
         }
     }
 }

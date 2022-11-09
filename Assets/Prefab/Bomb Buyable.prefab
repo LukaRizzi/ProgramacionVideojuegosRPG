@@ -249,7 +249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4868501351278479716, guid: dd6872e4e4b1274489a1745fef345cf7, type: 3}
       propertyPath: m_Name
-      value: Bomb
+      value: Bomb Buyable
       objectReference: {fileID: 0}
     - target: {fileID: 4868501351278479737, guid: dd6872e4e4b1274489a1745fef345cf7, type: 3}
       propertyPath: m_RootOrder

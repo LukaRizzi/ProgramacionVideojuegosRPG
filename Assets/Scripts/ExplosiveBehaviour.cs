@@ -3,7 +3,8 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 
-namespace RPGUNDAV.Gameplay{
+namespace RPGUNDAV.Gameplay
+{
     public class ExplosiveBehaviour : MonoBehaviour
     {
         public float timeTillExplosion;

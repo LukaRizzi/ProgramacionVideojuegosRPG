@@ -4,7 +4,7 @@ namespace RPGUNDAV.Gameplay
     {        
         BOMB,
         COIN,
-        KEY  
-
+        KEY,
+        HEART
     }
 }

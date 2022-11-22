@@ -181,6 +181,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   hpMax: 4
+  drops:
+  - {fileID: 6114721163295888136, guid: 11a47b1e167757a4c80a6c628120abb7, type: 3}
+  chance: 1
 --- !u!58 &1781458147
 CircleCollider2D:
   m_ObjectHideFlags: 0

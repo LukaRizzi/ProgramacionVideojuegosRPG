@@ -30,13 +30,17 @@ namespace RPGUNDAV.Gameplay
 
         #region UPDATE_PLAYER_HUD
         public void Update(){
-            coinText.text = ""+playerUsables.GetUsableCount(PickUp.COIN);
-            bombText.text = ""+playerUsables.GetUsableCount(PickUp.BOMB);
-            keyText.text = ""+playerUsables.GetUsableCount(PickUp.KEY);
+            coinText.text = playerUsables.GetUsableCount(PickUp.COIN).ToString();
+            bombText.text = playerUsables.GetUsableCount(PickUp.BOMB).ToString();
+            keyText.text = playerUsables.GetUsableCount(PickUp.KEY).ToString();
         }
 
         public void AddPickUpToPlayer(PickUp pickup, int quantity){
-            playerUsables.AddUsable(pickup, quantity);
+            if (pickup != PickUp.HEART)
+                playerUsables.AddUsable(pickup, quantity);
+            else
+                player.GetComponent<PlayerHPManager>().Hp++;
+
         }
         #endregion
     }

@@ -20,7 +20,7 @@ namespace RPGUNDAV.Gameplay
                 }
             }
         }
-        public int hpMax = 100;
+        public int hpMax = 5;
 
         public abstract void OnDeath();
     }

@@ -18,8 +18,6 @@ namespace RPGUNDAV.Gameplay
         [HideInInspector] public GameObject player;
         [HideInInspector] public PlayerUsables playerUsables;
 
-        public DisplayLives displayLives;
-
         private void Start()
         {
             levelName = SceneManager.GetActiveScene().name;

@@ -6,8 +6,8 @@ namespace RPGUNDAV.Gameplay
 {
     public abstract class HPManager : MonoBehaviour
     {
-        [SerializeField] private int hp;
-        public int Hp
+        [SerializeField] internal int hp;
+        public virtual int Hp
         {
             get { return hp; }
             set

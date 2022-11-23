@@ -126,6 +126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10
   hpMax: 10
+  drops:
+  - {fileID: 6114721163295888136, guid: 11a47b1e167757a4c80a6c628120abb7, type: 3}
+  chance: 0.2
 --- !u!114 &6579807527046133808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,9 +161,13 @@ MonoBehaviour:
   sr: {fileID: 6579807527046133812}
   animator: {fileID: 6579807527046133814}
   raycastWallDistance: 0.75
+  raycastPlayerDistance: 5
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!95 &6579807527046133814
 Animator:
   serializedVersion: 4

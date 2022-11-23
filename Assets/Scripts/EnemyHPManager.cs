@@ -13,7 +13,12 @@ namespace RPGUNDAV.Gameplay
         public override void OnDeath()
         {
             if (drops.Length > 0 && Random.Range(0, 1f) <= chance)
-                Instantiate(drops[Random.Range(0, drops.Length)], transform.position, Quaternion.identity);
+            {
+                GameObject drop = Instantiate(drops[Random.Range(0, drops.Length)], transform.position, Quaternion.identity);
+                OneTimePickup otp = drop.GetComponent<OneTimePickup>();
+                if (otp != null)
+                    Destroy(otp);
+            }
 
             Destroy(this.gameObject);
         }

@@ -176,9 +176,13 @@ MonoBehaviour:
   sr: {fileID: 7432393713794153055}
   animator: {fileID: 6090486577355922321}
   raycastWallDistance: 0.75
+  raycastPlayerDistance: 5
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!50 &7782758249608927552
 Rigidbody2D:
   serializedVersion: 4
@@ -230,6 +234,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   hpMax: 4
+  drops: []
+  chance: 0.2
 --- !u!58 &600387809
 CircleCollider2D:
   m_ObjectHideFlags: 0

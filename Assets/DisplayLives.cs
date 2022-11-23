@@ -8,32 +8,14 @@ namespace RPGUNDAV
     {
         [SerializeField] GameObject[] lives;
 
-        public void AddHeart()
+        public void UpdateHearts(int number)
         {
+            int i = 0;
             foreach (GameObject go in lives)
             {
-                if (!go.activeSelf)
-                {
-                    go.SetActive(true);
-                    return;
-                }
+                go.SetActive(i < number);
+                i++;
             }
-
-            Debug.Log("Tenés vida máxima");
-        }
-
-        public void RemoveHeart()
-        {
-            foreach (GameObject go in lives)
-            {
-                if (go.activeSelf)
-                {
-                    go.SetActive(false);
-                    return;
-                }
-            }
-
-            Debug.Log("Deberías estar muerto");
         }
     }
 }

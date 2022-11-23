@@ -1,3 +1,4 @@
+using RPGUNDAV;
 using RPGUNDAV.Gameplay;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
     public Vector3 newPos;
 
     public bool loadSaveSpot = false;
+
+    public DisplayLives livesDisplay;
 
     private void Start()
     {

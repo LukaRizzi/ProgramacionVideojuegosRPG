@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 863595859099456639}
   - component: {fileID: 3741632243078250283}
   - component: {fileID: 4837021664719698096}
-  - component: {fileID: 5847591768838064865}
+  - component: {fileID: 3470739950565189541}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -151,7 +151,7 @@ MonoBehaviour:
   ps: {fileID: 0}
   price: 0
   pickUp: 3
---- !u!114 &5847591768838064865
+--- !u!114 &3470739950565189541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

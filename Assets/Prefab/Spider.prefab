@@ -128,6 +128,7 @@ MonoBehaviour:
   hpMax: 10
   drops:
   - {fileID: 6114721163295888136, guid: 11a47b1e167757a4c80a6c628120abb7, type: 3}
+  - {fileID: 863595859099456633, guid: 6e42db921411ce440bc052e102588179, type: 3}
   chance: 0.2
 --- !u!114 &6579807527046133808
 MonoBehaviour:
